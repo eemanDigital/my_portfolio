@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+/* Base Styles */
+.navbar {
+  width: 100%;
+  color: #fff;
+  padding: 1rem 2rem;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 1rem 2rem 0 0;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-style: normal;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  background: linear-gradient(135deg, #0073e68f, #4fc2f768);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.navbar-logo::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  background: #4fc2f78c;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar-item {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-item:hover {
+  transform: translateY(-2px);
+  border-bottom: 4px solid #ffff;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: center;
+}
+
+.navbar-close {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 70vh;
+    flex-direction: column;
+    background: #fff;
+    z-index: 100;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+
+  .navbar-item {
+    margin: 1rem 0;
+    text-align: left;
+    color: #3a75ff;
+    padding: 0.75rem 1.5rem;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease,
+      border-left 0.4s ease;
+  }
+
+  .navbar-item:hover {
+    border-left: 4px solid #4fc3f7;
+    padding-left: 2rem;
+  }
+
+  .navbar-menu li {
+    margin: 1.3rem 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-close {
+    display: flex;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: #3a75ff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem; /* Space below the close icon */
+    padding: 0.5rem; /* Padding for easier click */
+  }
+
+  .navbar-menu .navbar-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Focus and Accessibility Enhancements */
+.navbar-item:focus,
+.navbar-toggle:focus {
+  color: #bbcbee;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
