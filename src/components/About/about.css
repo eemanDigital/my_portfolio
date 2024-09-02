@@ -1,0 +1,252 @@
+.about {
+  background: linear-gradient(165deg, #001099 0, #3ad9ff 100%);
+  color: #ffffff;
+  padding: 6rem 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-content {
+  position: relative;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  animation: slideInLeft 1s ease-out;
+}
+
+.about-image-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 16, 153, 0.3);
+  margin-bottom: 2rem;
+  animation: rotateIn 1.5s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.about-image-container:hover {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-intro,
+.about-description,
+.about-motivation {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.about-intro {
+  animation-delay: 0.3s;
+}
+.about-description {
+  animation-delay: 0.5s;
+}
+.about-motivation {
+  animation-delay: 0.7s;
+}
+
+.highlight {
+  color: #3ad9ff;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3ad9ff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.about-skills {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.about-skills-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.about-skills-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.skill-tag:hover {
+  transform: translateY(-5px) rotate(5deg);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.animation-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(58, 217, 255, 0.1) 0%,
+      rgba(58, 217, 255, 0) 20%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(0, 16, 153, 0.1) 0%,
+      rgba(0, 16, 153, 0) 20%
+    );
+  animation: pulse 10s ease-in-out infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-image-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Add a subtle wave effect to the background */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, #ffffff, #3ad9ff);
+  animation: wave 8s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

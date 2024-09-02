@@ -1,0 +1,65 @@
+/* Base Styles for Social Media Icons Component */
+.social-media-icons {
+  position: fixed;
+  top: 70%;
+  right: 0;
+  padding-right: 1rem;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.social-media-icons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media-icons li {
+  margin: 0.5rem 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-media-icons li:hover {
+  transform: translateX(-10px); /* Icons slide out to the left */
+}
+
+.social-media-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(165deg, #003099 0, #3a3dff 100%);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  background: #0073e6; /* Change color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Icon Sizes and Responsiveness */
+.social-media-icons svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .social-media-icons {
+    top: 30%;
+  }
+
+  .social-media-icons {
+    top: 80%;
+    right: 0;
+  }
+
+  .social-media-icons a {
+    width: 35px;
+    height: 35px;
+  }
+}
