@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
 import "./navbar.css";
 import Button from "../Button/Button";
 
@@ -21,19 +22,39 @@ const Navbar = () => {
             <FaTimes />
           </button>
           <li>
-            <a href="#about" className="navbar-item">
+            <a href="/" className="navbar-item" onClick={toggleMenu}>
+              Home
+            </a>
+          </li>
+          <li>
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              className="navbar-item"
+              onClick={toggleMenu}>
               About
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#projects" className="navbar-item">
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="navbar-item"
+              onClick={toggleMenu}>
               Projects
-            </a>
+            </ScrollLink>
           </li>
           <li>
-            <a href="#contact" className="navbar-item">
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="navbar-item"
+              onClick={toggleMenu}>
               Contact
-            </a>
+            </ScrollLink>
           </li>
           <li>
             <Button text="Resume" className="bordered" />

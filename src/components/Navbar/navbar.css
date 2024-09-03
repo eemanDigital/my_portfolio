@@ -3,6 +3,7 @@
 /* Base Styles */
 .navbar {
   width: 100%;
+  background: linear-gradient(165deg, #001099 0, #3ad9ff 100%);
   color: #fff;
   padding: 1rem 2rem;
   top: 0;
