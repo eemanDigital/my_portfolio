@@ -1,11 +1,11 @@
 /* Base Styles for Hero Component */
 .hero {
-  background: linear-gradient(165deg, #001099 0, #3ad9ff 100%);
+  /* background: linear-gradient(165deg, #001099 0, #3ad9ff 100%); */
   position: relative;
   color: #fff;
   padding: 2rem 0;
   text-align: left;
-  height: 680px;
+  height: 440px;
   width: 100%;
 }
 

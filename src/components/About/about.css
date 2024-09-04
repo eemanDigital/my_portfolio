@@ -1,60 +1,48 @@
-/* Base Styles for About Component */
 .about {
-  background-color: #ffffff;
-  color: #333333;
-  padding: 2rem;
-  font-family: "Arial", sans-serif;
+  padding: 4rem 2rem;
+  background-color: #f9fafb;
+  color: #2d3748;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a202c;
 }
 
 .about-container {
-  max-width: 1000px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 2rem;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  width: 70px;
-  height: 3px;
-  background-color: #007bff;
-  transform: translateX(-50%);
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
 }
 
 .about-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  gap: 1rem;
+  text-align: center;
 }
 
 .about-image-container {
-  width: 150px;
-  height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .about-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .about-image-container:hover .about-image {
@@ -62,32 +50,55 @@
 }
 
 .about-title-container {
-  flex-grow: 1;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about-name {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  color: #001099;
+  margin: 0;
+  color: #2d3748;
 }
 
 .about-title {
   font-size: 1.2rem;
-  font-weight: 400;
-  margin: 0;
-  color: #555555;
+  font-weight: 500;
+  color: #4a5568;
+  margin-top: 0.5rem;
 }
 
 .about-content {
-  line-height: 1.6;
-  font-size: 1.1rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
 }
 
-.about-intro,
-.about-description {
+.about-content:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about-intro {
+  font-size: 1rem;
   margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #3182ce;
+}
+
+.about-description,
+.about-motivation {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.6;
 }
 
 .about-skills {
@@ -96,99 +107,60 @@
 
 .about-skills-title {
   font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
   margin-bottom: 1rem;
-  color: #001099;
-  border-bottom: 2px solid #3ad9ff;
-  padding-bottom: 0.5rem;
-  display: inline-block;
+  text-align: center;
 }
 
 .about-skills-list {
-  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 0.5rem;
+  list-style: none;
 }
 
 .skill-item {
-  background-color: #f8f9fa;
-  padding: 0.75rem 1rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
   display: flex;
+  font-family: monospace;
+
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  padding: 1rem;
+  background-color: #edf2f7;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
 }
 
 .skill-item:hover {
-  background-color: #e9ecef;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transform: translateY(-4px);
+  background-color: #e2e8f0;
 }
 
 .skill-name {
-  margin-left: 0.5rem;
-}
-
-.about-icons {
-  display: none; /* Hide the separate icons section */
-}
-
-.tech-icon {
-  font-size: 1.5rem;
-  color: #0073e6;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.tech-icon:hover {
-  transform: scale(1.2);
-  color: #001099;
+  font-size: 0.9rem;
+  color: #2d3748;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
-  .about-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image-container {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-
-  .about-title-container {
-    text-align: center;
-  }
-
-  .about-skills-list {
+  .about-container {
     grid-template-columns: 1fr;
+    text-align: center;
   }
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  .about-header,
+  .about-content {
+    text-align: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .about-content {
+    margin-top: 2rem;
   }
-}
-
-.about-header,
-.about-content,
-.about-skills {
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.about-content {
-  animation-delay: 0.2s;
-}
-.about-skills {
-  animation-delay: 0.4s;
 }

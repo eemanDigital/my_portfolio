@@ -1,0 +1,28 @@
+.title-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title-header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.title-header-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-header-line {
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  margin: 0 10px;
+}
+
+.title-header-icon {
+  width: 30px;
+  height: 30px;
+}

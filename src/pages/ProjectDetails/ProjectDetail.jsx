@@ -1,7 +1,18 @@
+import { useParams } from "react-router-dom";
+import { projects } from "../../data";
 import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
 import "./projectDetail.css";
 
-const ProjectDetail = ({ project }) => {
+const ProjectDetail = () => {
+  const { id } = useParams(); // Get the project ID from the URL
+  const project = projects.find((project) => project.id === parseInt(id)); // Find the project by ID
+
+  if (!project) {
+    return <p>Project not found.</p>;
+  }
+
+  console.log(project.carousel_images); // Ensure this logs the correct image paths
+
   return (
     <div className="project-detail">
       <header className="project-header">
@@ -10,7 +21,7 @@ const ProjectDetail = ({ project }) => {
       </header>
 
       <section className="project-showcase">
-        <ImageCarousel images={project.images} />
+        <ImageCarousel images={project.carousel_images || []} />
       </section>
 
       <section className="project-info">

@@ -9,7 +9,6 @@ import HomeLayout from "./pages/home/HomeLayout";
 import Home from "./pages/home/Home";
 import "./app.css";
 import ProjectDetail from "./pages/ProjectDetails/ProjectDetail";
-import { projectDetail } from "./data";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +16,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />}></Route>
       <Route
         path="projects/:id/detail"
-        element={<ProjectDetail project={projectDetail} />}></Route>
+        element={<ProjectDetail project={ProjectDetail} />}></Route>
     </Route>
   )
 );

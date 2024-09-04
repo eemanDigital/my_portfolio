@@ -3,9 +3,9 @@
 /* Base Styles */
 .navbar {
   width: 100%;
-  background: linear-gradient(165deg, #001099 0, #3ad9ff 100%);
+  /* background: linear-gradient(165deg, #001099 0, #3ad9ff 100%); */
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   top: 0;
   z-index: 100;
 }
@@ -15,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 1rem 2rem 0 0;
+  margin: 0 3rem;
   padding: 0 2rem;
 }
 

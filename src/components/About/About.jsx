@@ -1,9 +1,12 @@
-import "./about.css";
 import profileImage from "../../assets/profileImage.jpg"; // Update with the actual path to your image
 import { FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiJavascript } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { AiOutlineAntDesign } from "react-icons/ai";
+import { IoIosPerson } from "react-icons/io";
+
+import "./about.css";
+import TitleHeader from "../TitleHeader/TitleHeader";
 
 const skills = [
   { name: "JavaScript (ES6+)", icon: <SiJavascript /> },
@@ -19,7 +22,8 @@ const skills = [
 const About = () => {
   return (
     <section className="about" id="about">
-      <h2 className="section-title">About Me</h2>
+      {/* <h2 className="title">About Me</h2> */}
+      <TitleHeader title="About Me" icon={<IoIosPerson size={40} />} />
       <div className="about-container">
         <div className="about-header">
           <div className="about-image-container">
