@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./contact.css";
+import styles from "./contact.module.css";
 import TitleHeader from "../TitleHeader/TitleHeader";
 import { RiContactsBook3Line } from "react-icons/ri";
 
@@ -60,41 +60,43 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact">
+    <section className={styles.contact}>
       <TitleHeader title="Contact" icon={<RiContactsBook3Line size={40} />} />
 
-      <div className="contact-form-container ">
+      <div className={styles.contactFormContainer}>
         <ToastContainer />
         <form ref={form} onSubmit={sendEmail}>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="user_name">Name</label>
             <input type="text" name="user_name" id="user_name" required />
             {formErrors.user_name && (
-              <span className="error">{formErrors.user_name}</span>
+              <span className={styles.error}>{formErrors.user_name}</span>
             )}
           </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="user_email">Email</label>
             <input type="email" name="user_email" id="user_email" required />
             {formErrors.user_email && (
-              <span className="error">{formErrors.user_email}</span>
+              <span className={styles.error}>{formErrors.user_email}</span>
             )}
           </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="subject">Subject</label>
             <input type="text" name="subject" id="subject" required />
             {formErrors.subject && (
-              <span className="error">{formErrors.subject}</span>
+              <span className={styles.error}>{formErrors.subject}</span>
             )}
           </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" required></textarea>
             {formErrors.message && (
-              <span className="error">{formErrors.message}</span>
+              <span className={styles.error}>{formErrors.message}</span>
             )}
           </div>
-          <button type="submit">Send</button>
+          <button type="submit" className={styles.submitButton}>
+            Send
+          </button>
         </form>
       </div>
     </section>

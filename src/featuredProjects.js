@@ -9,9 +9,7 @@ export const featuredProjects = [
     header: "Featured Project",
     title: "Case Management Application",
     shortDescription: "A Complete Case Management System for Law Firms",
-
     image: screenshot2,
-
     fullDescription:
       "CaseMaster App streamlines the process of managing legal cases, enabling law firms to efficiently handle case management, client and staff coordination, document handling, billing, and reporting, all within a single platform.",
 
@@ -61,5 +59,34 @@ export const featuredProjects = [
     ],
     siteUrl: "https://case-master-app.example.com",
     codeUrl: "https://github.com/jalasem/case-master-app",
+  },
+
+  {
+    id: 2,
+    title: "TicTacToe App",
+    header: "Other Project",
+    shortDescription: "A simple TicTacToe game application.",
+    fullDescription:
+      "This project showcases a basic TicTacToe game developed using React and CSS.",
+    image: screenshot4,
+    carousel_images: [screenshot1, screenshot4],
+    technologies: ["React", "CSS"],
+    timeline: "July 2022 - August 2022",
+    role: "Developer",
+    challenges: [
+      {
+        title: "Game Logic Implementation",
+        description:
+          "Developing the game logic in a modular and reusable manner.",
+        solution:
+          "Used React hooks to manage game state and implemented an algorithm for game outcomes.",
+      },
+    ],
+    outcomes: [
+      "Enhanced understanding of game development with React",
+      "Improved skills in state management and component reusability",
+    ],
+    siteUrl: "https://example.com/tictactoe",
+    codeUrl: "https://github.com/example/tictactoe-repo",
   },
 ];

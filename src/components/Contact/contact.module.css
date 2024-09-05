@@ -1,11 +1,10 @@
 .contact {
-  /* background: #ffffff; */
   padding: 5rem;
   position: relative;
   overflow: hidden;
 }
 
-.contact-form-container {
+.contactFormContainer {
   max-width: 400px;
   margin: 4rem auto;
   padding: 2rem;
@@ -14,7 +13,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form-title {
+.contactFormTitle {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
@@ -22,7 +21,7 @@
   color: #333;
 }
 
-.form-group {
+.formGroup {
   margin-bottom: 1rem;
 }
 
@@ -47,7 +46,7 @@ textarea {
   resize: vertical;
 }
 
-button {
+.submitButton {
   width: 100%;
   padding: 0.75rem;
   background-color: #4a90e2;
@@ -59,12 +58,12 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.submitButton:hover {
   background-color: #357abd;
 }
 
 @media (max-width: 480px) {
-  .contact-form-container {
+  .contactFormContainer {
     padding: 1rem;
   }
 }

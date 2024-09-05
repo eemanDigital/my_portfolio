@@ -5,8 +5,9 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { IoIosPerson } from "react-icons/io";
 
-import "./about.css";
+import styles from "./about.module.css";
 import TitleHeader from "../TitleHeader/TitleHeader";
+import Certificate from "../CERT/Certificate";
 
 const skills = [
   { name: "JavaScript (ES6+)", icon: <SiJavascript /> },
@@ -21,54 +22,56 @@ const skills = [
 
 const About = () => {
   return (
-    <section className="about" id="about">
-      {/* <h2 className="title">About Me</h2> */}
+    <section className={styles.about} id="about">
       <TitleHeader title="About Me" icon={<IoIosPerson size={40} />} />
-      <div className="about-container">
-        <div className="about-header">
-          <div className="about-image-container">
+      <div className={styles.aboutContainer}>
+        <div className={styles.aboutHeader}>
+          <div className={styles.aboutImageContainer}>
             <img
               src={profileImage}
               alt="Lukman Asinmi"
-              className="about-image"
+              className={styles.aboutImage}
             />
           </div>
-          <div className="about-title-container">
-            <h1 className="about-name">Hello! I'm Lukman</h1>
-            <h2 className="about-title">
+          <div className={styles.aboutTitleContainer}>
+            {/* <h1 className={styles.aboutName}>Hello! I'm Lukman</h1> */}
+            <h2 className={styles.aboutTitle}>
               Software Engineer based in Nigeria 🇳🇬
             </h2>
           </div>
         </div>
-        <div className="about-content">
-          <p className="about-intro">
-            Hello! I'm <span className="highlight">Lukman Asinmi</span>, a
-            software engineer based in Nigeria 🇳🇬 with over 5 years of
+        <div className={styles.aboutContent}>
+          <p className={styles.aboutIntro}>
+            Hello! I'm <span className={styles.highlight}>Lukman Asinmi</span>,
+            a software engineer based in Nigeria 🇳🇬 with over 5 years of
             experience in the field.
           </p>
-          <p className="about-description">
+          <p className={styles.aboutDescription}>
             My journey in software engineering has been marked by continuous
             learning, exploration, and leadership. I've had the privilege of
             building applications and solutions across various sectors, serving
             both small businesses and large enterprises.
           </p>
-          <p className="about-motivation">
+          <p className={styles.aboutMotivation}>
             I'm driven by the challenge of creating impactful solutions that
             users love and that meet critical business needs. To me, every line
             of code is an opportunity to make a difference.
           </p>
         </div>
-        <div className="about-skills">
-          <h3 className="about-skills-title">Technical Expertise</h3>
-          <ul className="about-skills-list">
-            {skills.map((skill, index) => (
-              <li key={index} className="skill-item">
-                {skill.icon}
-                <span className="skill-name">{skill.name}</span>
-              </li>
-            ))}
-          </ul>
+        <div className={styles.aboutSkills}>
+          <div>
+            <h3 className={styles.aboutSkillsTitle}>Technical Expertise</h3>
+            <ul className={styles.aboutSkillsList}>
+              {skills.map((skill, index) => (
+                <li key={index} className={styles.skillItem}>
+                  {skill.icon}
+                  <span className={styles.skillName}>{skill.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+        <Certificate />
       </div>
     </section>
   );

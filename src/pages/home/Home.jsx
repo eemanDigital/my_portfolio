@@ -1,9 +1,9 @@
 import About from "../../components/About/About";
 import ContactForm from "../../components/Contact/Contact";
-import Divider from "../../components/Divider/Divider";
+
 import FeaturedProjectList from "../../components/FeaturedProject/FeaturedProjectList";
 import Hero from "../../components/Hero/Hero";
-import ProjectList from "../../components/Projects/ProjectList";
+
 import SocialMediaIcons from "../../components/SocialMedia/SocialMediaIcons";
 
 import "./home.css";
@@ -18,10 +18,8 @@ const Home = () => {
         <About />
       </div>
 
-      <FeaturedProjectList />
-
       <div id="projects">
-        <ProjectList />
+        <FeaturedProjectList />
       </div>
 
       <div id="contact">

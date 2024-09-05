@@ -1,60 +1,63 @@
 import { useParams } from "react-router-dom";
-import { projects } from "../../data";
-import ImageCarousel from "../../components/ImageCarousel/ImageCarousel";
-import "./projectDetail.css";
+import { featuredProjects } from "../../featuredProjects";
+import styles from "./ProjectDetail.module.css";
 
 const ProjectDetail = () => {
-  const { id } = useParams(); // Get the project ID from the URL
-  const project = projects.find((project) => project.id === parseInt(id)); // Find the project by ID
+  const { id } = useParams();
+  const project = featuredProjects.find(
+    (project) => project.id === parseInt(id)
+  );
 
   if (!project) {
-    return <p>Project not found.</p>;
+    return <p className={styles.notFound}>Project not found.</p>;
   }
 
-  console.log(project.carousel_images); // Ensure this logs the correct image paths
-
   return (
-    <div className="project-detail">
-      <header className="project-header">
-        <h1 className="project-title">{project.title}</h1>
-        <p className="project-tagline">{project.shortDescription}</p>
+    <div className={styles.projectDetail}>
+      <header className={styles.projectHeader}>
+        <h1 className={styles.projectTitle}>{project.title}</h1>
+        <p className={styles.projectTagline}>{project.shortDescription}</p>
       </header>
 
-      <section className="project-showcase">
-        <ImageCarousel images={project.carousel_images || []} />
+      <section className={styles.projectShowcase}>
+        <img
+          src={project.image}
+          alt={project.title}
+          className={styles.projectImage}
+        />
       </section>
 
-      <section className="project-info">
-        <div className="project-description">
+      <section className={styles.projectInfo}>
+        <div className={styles.projectDescription}>
           <h2>About the Project</h2>
           <p>{project.fullDescription}</p>
         </div>
 
-        <div className="project-metadata">
-          <div className="metadata-item">
+        <div className={styles.projectMetadata}>
+          <div className={styles.metadataItem}>
             <h3>Technologies Used</h3>
-            <ul className="technology-list">
+            <ul className={styles.technologyList}>
               {project.technologies.map((tech, index) => (
-                <li key={index} className="technology-item">
+                <li key={index} className={styles.technologyItem}>
                   {tech}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="metadata-item">
+          <div className={styles.metadataItem}>
             <h3>Project Timeline</h3>
             <p>{project.timeline}</p>
           </div>
 
-          <div className="metadata-item">
+          <div className={styles.metadataItem}>
             <h3>My Role</h3>
             <p>{project.role}</p>
           </div>
         </div>
       </section>
 
-      <section className="project-challenges">
+      <section className={styles.projectChallenges}>
         <h2>Challenges and Solutions</h2>
         <ul>
           {project.challenges.map((challenge, index) => (
@@ -69,7 +72,7 @@ const ProjectDetail = () => {
         </ul>
       </section>
 
-      <section className="project-outcomes">
+      <section className={styles.projectOutcomes}>
         <h2>Outcomes and Achievements</h2>
         <ul>
           {project.outcomes.map((outcome, index) => (
@@ -78,17 +81,17 @@ const ProjectDetail = () => {
         </ul>
       </section>
 
-      <footer className="project-footer">
+      <footer className={styles.projectFooter}>
         <a
           href={project.siteUrl}
-          className="cta-button"
+          className={styles.ctaButton}
           target="_blank"
           rel="noopener noreferrer">
           Visit Live Site
         </a>
         <a
           href={project.codeUrl}
-          className="cta-button secondary"
+          className={`${styles.ctaButton} ${styles.secondary}`}
           target="_blank"
           rel="noopener noreferrer">
           View Source Code

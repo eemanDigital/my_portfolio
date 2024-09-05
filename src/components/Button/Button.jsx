@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./button.css";
+import styles from "./button.module.css";
 
 const Button = ({
   text,
@@ -11,7 +11,7 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`button ${className}`}
+      className={`${styles.button} ${styles[className]}`}
       onClick={onClick}
       disabled={disabled}>
       {text}

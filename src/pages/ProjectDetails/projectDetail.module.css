@@ -1,0 +1,157 @@
+.projectDetail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+.projectHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectTitle {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.projectTagline {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.projectShowcase {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.projectInfo {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projectDescription {
+  flex: 2;
+}
+
+.projectMetadata {
+  flex: 1;
+}
+
+.metadataItem {
+  margin-bottom: 1.5rem;
+}
+
+.metadataItem h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.technologyList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.technologyItem {
+  background-color: #3498db;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.projectChallenges,
+.projectOutcomes {
+  margin-bottom: 2rem;
+}
+
+.projectChallenges h2,
+.projectOutcomes h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.projectChallenges ul,
+.projectOutcomes ul {
+  padding-left: 1.5rem;
+}
+
+.projectChallenges li,
+.projectOutcomes li {
+  margin-bottom: 1rem;
+}
+
+.projectFooter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #2980b9;
+}
+
+.ctaButton.secondary {
+  background-color: #2ecc71;
+}
+
+.ctaButton.secondary:hover {
+  background-color: #27ae60;
+}
+
+.notFound {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e74c3c;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .projectInfo {
+    flex-direction: column;
+  }
+
+  .projectTitle {
+    font-size: 2rem;
+  }
+
+  .projectTagline {
+    font-size: 1rem;
+  }
+
+  .projectFooter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaButton {
+    text-align: center;
+  }
+}

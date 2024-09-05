@@ -1,0 +1,25 @@
+.featuredListContainer {
+  background-color: #f3f6f8;
+  padding: 2rem;
+}
+
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.evenProject {
+  flex-direction: row;
+}
+
+.oddProject {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .evenProject,
+  .oddProject {
+    flex-direction: column;
+  }
+}

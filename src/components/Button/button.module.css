@@ -20,45 +20,34 @@
   cursor: not-allowed;
 }
 
-.button.primary {
+.buttonPrimary {
   background-color: #0073e6;
 }
 
-.button.secondary {
+.buttonSecondary {
   background-color: #4fc3f7;
 }
 
-.button.danger {
+.buttonDanger {
   background-color: #e60000;
 }
 
 /* Custom Bordered Button */
-.button.bordered {
+.buttonBordered {
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #ffffff;
   margin-left: 2rem;
 }
-.button.bordered-hero-btn {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
 
-.button.bordered-hero-btn:hover {
-  background-color: transparent;
-  border: 2px solid #0073e6;
-  font-weight: 300;
-  color: #fff;
-}
-.button.bordered:hover {
+.buttonBordered:hover {
   background-color: #0073e6;
   color: #fff;
 }
 
 @media (max-width: 768px) {
   /* Custom Bordered Button */
-  .button.bordered {
+  .buttonBordered {
     background-color: #0073e6;
     color: #fff;
     margin-left: 1rem;

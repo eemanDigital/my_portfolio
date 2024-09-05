@@ -9,13 +9,13 @@
   width: 100%;
 }
 
-.hero-container {
+.heroContainer {
   max-width: 800px;
   padding-left: 4rem;
   margin: 0 2rem;
 }
 
-.section-title {
+.sectionTitle {
   text-align: center;
   font-size: 2.5rem;
   color: #333;
@@ -23,7 +23,7 @@
   position: relative;
 }
 
-.section-title::after {
+.sectionTitle::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -34,38 +34,27 @@
   transform: translateX(-50%);
 }
 
-.hero-intro {
+.heroIntro {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: #e3e3e3; /* Lighter shade for intro text */
 }
 
-.hero-title {
+.heroTitle {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.hero-description {
+.heroDescription {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: #f5f5f5; /* Softer white for paragraph text */
 }
 
-.hero-button {
-  background-color: #4fc3f7;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
 /* Icon Styles */
-.hero-icons {
+.heroIcons {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,11 +64,30 @@
   pointer-events: none;
 }
 
-.hero-icon {
+.heroIcon {
   position: absolute;
   color: rgba(255, 255, 255, 0.1);
   font-size: 5rem;
   animation: rotate 20s linear infinite;
+}
+
+.btn {
+  background-color: transparent;
+  color: #ffffff;
+  width: 200px;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border-color: #e4e8ec;
+  color: #b6cce3;
 }
 
 @keyframes rotate {
@@ -91,38 +99,38 @@
   }
 }
 
-.react-icon {
+.reactIcon {
   top: 10%;
   left: 10%;
 }
 
-.node-icon {
+.nodeIcon {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.mongodb-icon {
+.mongodbIcon {
   bottom: 40%;
   right: 3%;
 }
 
-.html-icon {
+.htmlIcon {
   top: 0%;
   right: 20%;
 }
 
-.css-icon {
+.cssIcon {
   bottom: 20%;
   left: 20%;
 }
 
-.computer-icon {
+.computerIcon {
   top: 30%;
   left: 70%;
 }
 
-.express-icon {
+.expressIcon {
   bottom: 70%;
   right: 30%;
 }
@@ -134,36 +142,36 @@
     height: 500px;
   }
 
-  .hero-container {
+  .heroContainer {
     max-width: 100%;
     margin: 2rem;
     padding-left: 1.5rem;
   }
-  .section-title {
+  .sectionTitle {
     font-size: 2rem;
 
     margin-bottom: 3rem;
   }
-  .hero-intro {
+  .heroIntro {
     font-size: 1.2rem;
   }
 
-  .hero-title {
+  .heroTitle {
     font-size: 2.5rem;
   }
 
-  .hero-description {
+  .heroDescription {
     font-size: 1rem;
     margin-bottom: 1rem;
     padding-right: 4rem;
   }
 
-  .hero-button {
+  .btn {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
 
-  .hero-icon {
+  .heroIcon {
     font-size: 3rem;
   }
 }
@@ -174,24 +182,24 @@
     height: 580px;
   }
 
-  .hero-intro {
+  .heroIntro {
     font-size: 1rem;
   }
 
-  .hero-title {
+  .heroTitle {
     font-size: 2rem;
   }
 
-  .hero-description {
+  .heroDescription {
     font-size: 0.9rem;
   }
 
-  .hero-button {
+  .btn {
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
   }
 
-  .hero-icon {
+  .heroIcon {
     font-size: 2rem;
   }
 }

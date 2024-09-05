@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
-import "./navbar.css";
+import styles from "./Navbar.module.css";
 import Button from "../Button/Button";
 
 const Navbar = () => {
@@ -11,18 +11,30 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // download resume handler
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/uc?export=download&id=18wSQrl4i4jTecuyTprp-yvBRH6X9UWfU";
+    link.download = "Lukman_Asinmi_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <a href="/" className="navbar-logo">
+    <nav className={styles.navbar}>
+      <div className={styles.navbarContainer}>
+        <a href="/" className={styles.navbarLogo}>
           Lukman Asinmi
         </a>
-        <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
-          <button className="navbar-close" onClick={toggleMenu}>
+        <ul
+          className={`${styles.navbarMenu} ${isMenuOpen ? styles.active : ""}`}>
+          <button className={styles.navbarClose} onClick={toggleMenu}>
             <FaTimes />
           </button>
           <li>
-            <a href="/" className="navbar-item" onClick={toggleMenu}>
+            <a href="/" className={styles.navbarItem} onClick={toggleMenu}>
               Home
             </a>
           </li>
@@ -31,7 +43,7 @@ const Navbar = () => {
               to="about"
               smooth={true}
               duration={500}
-              className="navbar-item"
+              className={styles.navbarItem}
               onClick={toggleMenu}>
               About
             </ScrollLink>
@@ -41,7 +53,7 @@ const Navbar = () => {
               to="projects"
               smooth={true}
               duration={500}
-              className="navbar-item"
+              className={styles.navbarItem}
               onClick={toggleMenu}>
               Projects
             </ScrollLink>
@@ -51,17 +63,19 @@ const Navbar = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="navbar-item"
+              className={styles.navbarItem}
               onClick={toggleMenu}>
               Contact
             </ScrollLink>
           </li>
           <li>
-            <Button text="Resume" className="bordered" />
+            <button className={styles.btn} onClick={handleDownloadResume}>
+              Download Resume
+            </button>
           </li>
         </ul>
         {!isMenuOpen && (
-          <button className="navbar-toggle" onClick={toggleMenu}>
+          <button className={styles.navbarToggle} onClick={toggleMenu}>
             <FaBars />
           </button>
         )}

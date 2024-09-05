@@ -1,21 +1,20 @@
-import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
+    <footer className={styles.footer}>
+      <div className={styles.footerContent}>
+        <div className={styles.footerSection}>
           <h3>About Me</h3>
           <p>
             I'm a passionate developer creating innovative web solutions. Let's
             build something amazing together!
           </p>
         </div>
-        <div className="footer-section">
+        <div className={styles.footerSection}>
           <h3>Quick Links</h3>
           <ul>
             <li>
@@ -32,9 +31,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="footer-section">
+        <div className={styles.footerSection}>
           <h3>Connect</h3>
-          <div className="social-links">
+          <div className={styles.socialLinks}>
             <a
               href="https://github.com/yourusername"
               target="_blank"
@@ -56,17 +55,10 @@ const Footer = () => {
               aria-label="Twitter">
               <FaTwitter />
             </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter">
-              <FaTwitter />
-            </a>
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className={styles.footerBottom}>
         <p>&copy; {currentYear} Lukman Asinmi. All rights reserved.</p>
       </div>
     </footer>

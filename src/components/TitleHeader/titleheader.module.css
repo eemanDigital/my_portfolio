@@ -1,28 +1,33 @@
-.title-header {
+.titleHeader {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.title-header-title {
-  font-size: 2rem;
+.titleHeaderTitle {
+  color: #1d1c1c;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.4rem;
 }
 
-.title-header-icon-container {
+.titleHeaderIconContainer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.title-header-line {
+.titleHeaderLine {
   width: 50px;
   height: 1px;
-  background-color: #000;
+  background-color: #4f4b4b;
   margin: 0 10px;
 }
 
-.title-header-icon {
+.titleHeaderIcon {
   width: 30px;
   height: 30px;
+}
+
+svg {
+  color: rgb(15, 15, 234);
 }
