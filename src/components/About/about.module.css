@@ -1,7 +1,7 @@
 .about {
   padding: 4rem 2rem;
-  background-color: #f3f6f8;
-  color: #2d3748;
+  /* background: var(--foreground-color); */
+  color: var(--secondary-text-color);
 }
 
 .title {
@@ -9,7 +9,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  color: #1a202c;
+  color: var(--secondary-text-color);
 }
 
 .aboutContainer {
@@ -60,18 +60,19 @@
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0;
-  color: #2d3748;
+  color: var(--secondary-text-color);
 }
 
 .aboutTitle {
   font-size: 1.2rem;
   font-weight: 500;
-  color: #4a5568;
+  color: var(--secondary-text-color);
+
   margin-top: 0.5rem;
 }
 
 .aboutContent {
-  background-color: #ffffff;
+  background-color: var(--primary-white-color);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -97,7 +98,8 @@
 .aboutMotivation {
   margin-bottom: 1rem;
   font-size: 1rem;
-  color: #4a5568;
+  color: var(--secondary-text-color);
+
   line-height: 1.6;
 }
 
@@ -111,7 +113,8 @@
 .aboutSkillsTitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a202c;
+  color: var(--secondary-text-color);
+
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -132,7 +135,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1rem;
-  background-color: #edf2f7;
+  background-color: var(--primary-white-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: transform 0.2s ease, background-color 0.2s ease;
   cursor: pointer;
@@ -142,13 +146,19 @@
 
 .skillItem:hover {
   transform: translateY(-4px);
-  background-color: #e2e8f0;
+  background-color: var(--primary-white-color);
 }
 
 .skillName {
   font-size: 0.9rem;
-  color: #2d3748;
+  color: var(--secondary-text-color);
+
   font-weight: 500;
+}
+
+.skillItem svg {
+  color: var(--primary-blue-color);
+  font-size: 1.2rem;
 }
 
 @media (max-width: 768px) {

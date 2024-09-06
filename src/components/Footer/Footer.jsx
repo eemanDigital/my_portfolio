@@ -39,21 +39,21 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub">
-              <FaGithub />
+              <FaGithub className={styles.socialIcon} />
             </a>
             <a
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn">
-              <FaLinkedin />
+              <FaLinkedin className={styles.socialIcon} />
             </a>
             <a
               href="https://twitter.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter">
-              <FaTwitter />
+              aria-label="Twitter ">
+              <FaTwitter className={styles.socialIcon} />
             </a>
           </div>
         </div>

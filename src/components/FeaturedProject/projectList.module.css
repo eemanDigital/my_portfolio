@@ -1,5 +1,5 @@
 .featuredListContainer {
-  background-color: #f3f6f8;
+  /* background-color: var(--foreground-color); */
   padding: 2rem;
 }
 

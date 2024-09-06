@@ -1,0 +1,6 @@
+.app {
+  padding: 0;
+  margin: 0;
+  background: var(--background-primary-color);
+  transition: background 0.5s ease, color 0.6s ease;
+}

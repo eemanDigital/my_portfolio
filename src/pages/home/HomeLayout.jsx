@@ -2,9 +2,11 @@ import { Outlet } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
+import styles from "./home.module.css";
+
 const HomeLayout = () => {
   return (
-    <div className="home">
+    <div className={styles.home}>
       <Header />
       <Outlet />
       <Footer />

@@ -6,18 +6,18 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
-import "./socialMediaIcons.css";
+import styles from "./socialMediaIcons.module.css";
 
 const SocialMediaIcons = () => {
   return (
-    <div className="social-media-icons">
+    <div className={styles.socialMediaIcons}>
       <ul>
         <li>
           <a
             href="https://facebook.com"
             target="_blank"
             rel="noopener noreferrer">
-            <FaFacebookF />
+            <FaFacebookF className={styles.icon} />
           </a>
         </li>
         <li>
@@ -25,7 +25,7 @@ const SocialMediaIcons = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer">
-            <FaInstagram />
+            <FaInstagram className={styles.icon} />
           </a>
         </li>
         <li>
@@ -33,7 +33,7 @@ const SocialMediaIcons = () => {
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer">
-            <FaTwitter />
+            <FaTwitter className={styles.icon} />
           </a>
         </li>
         <li>
@@ -41,7 +41,7 @@ const SocialMediaIcons = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer">
-            <FaLinkedinIn />
+            <FaLinkedinIn className={styles.icon} />
           </a>
         </li>
         <li>
@@ -49,7 +49,7 @@ const SocialMediaIcons = () => {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer">
-            <FaGithub />
+            <FaGithub className={styles.icon} />
           </a>
         </li>
       </ul>

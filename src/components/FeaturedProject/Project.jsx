@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { FaGithub, FaGlobe, FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import styles from "./FeaturedProject.module.css";
+import styles from "./project.module.css";
 
-const FeaturedProject = ({ project }) => {
+const Project = ({ project }) => {
   return (
     <div className={styles.featuredProject}>
       <div className={styles.thumbnail}>
@@ -58,7 +58,7 @@ const FeaturedProject = ({ project }) => {
   );
 };
 
-FeaturedProject.propTypes = {
+Project.propTypes = {
   project: PropTypes.shape({
     id: PropTypes.string.isRequired,
     header: PropTypes.string.isRequired,
@@ -71,4 +71,4 @@ FeaturedProject.propTypes = {
   }).isRequired,
 };
 
-export default FeaturedProject;
+export default Project;

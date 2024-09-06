@@ -1,25 +1,23 @@
 import About from "../../components/About/About";
 import ContactForm from "../../components/Contact/Contact";
+import ProjectList from "../../components/FeaturedProject/ProjectList";
 
-import FeaturedProjectList from "../../components/FeaturedProject/FeaturedProjectList";
 import Hero from "../../components/Hero/Hero";
-
 import SocialMediaIcons from "../../components/SocialMedia/SocialMediaIcons";
 
-import "./home.css";
+// import styles from "./home.module.css";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div>
       <Hero />
-
       <SocialMediaIcons />
       <div id="about">
         <About />
       </div>
 
       <div id="projects">
-        <FeaturedProjectList />
+        <ProjectList />
       </div>
 
       <div id="contact">

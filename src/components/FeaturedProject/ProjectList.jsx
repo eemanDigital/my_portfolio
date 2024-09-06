@@ -1,20 +1,20 @@
 import { featuredProjects } from "../../featuredProjects";
 import TitleHeader from "../TitleHeader/TitleHeader";
 import { BsListTask } from "react-icons/bs";
-import FeaturedProject from "./FeaturedProject";
-import styles from "./FeaturedProjectList.module.css";
+import Project from "./Project";
+import styles from "./projectList.module.css";
 
-const FeaturedProjectList = () => {
+const ProjectList = () => {
   return (
     <div className={styles.featuredListContainer} id="projects">
       <TitleHeader title="My Projects" icon={<BsListTask size={40} />} />
       <div className={styles.projectList}>
         {featuredProjects.map((project) => (
-          <FeaturedProject key={project.id} project={project} />
+          <Project key={project.id} project={project} />
         ))}
       </div>
     </div>
   );
 };
 
-export default FeaturedProjectList;
+export default ProjectList;
