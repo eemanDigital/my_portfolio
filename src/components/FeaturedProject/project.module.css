@@ -80,6 +80,7 @@
   line-height: 1.6;
   color: var(--secondary-text-color);
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .technologies {

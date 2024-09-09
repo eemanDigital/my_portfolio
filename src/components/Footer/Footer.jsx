@@ -5,7 +5,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} data-aos="fade-up">
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>
           <h3>About Me</h3>

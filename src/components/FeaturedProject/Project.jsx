@@ -7,10 +7,17 @@ const Project = ({ project }) => {
   return (
     <div className={styles.featuredProject}>
       <div className={styles.thumbnail}>
-        <img className={styles.image} src={project.image} alt={project.title} />
+        <img
+          className={styles.image}
+          src={project.image}
+          alt={project.title}
+          data-aos="fade-right"
+        />
       </div>
       <div className={styles.content}>
-        <h1 className={styles.title}>{project.title}</h1>
+        <h1 className={styles.title} data-aos="fade-left">
+          {project.title}
+        </h1>
         <div
           className={
             project.header === "Featured Project"
@@ -20,15 +27,17 @@ const Project = ({ project }) => {
           {project.header}
         </div>
         <hr className={styles.separator} />
-        <p className={styles.description}>{project.fullDescription}</p>
-        <div className={styles.technologies}>
+        <p className={styles.description} data-aos="zoom-out">
+          {project.fullDescription}
+        </p>
+        <div className={styles.technologies} data-aos="fade-left">
           {project.technologies.map((tech, index) => (
             <span key={index} className={styles.techTag}>
               {tech}
             </span>
           ))}
         </div>
-        <div className={styles.actions}>
+        <div className={styles.actions} data-aos="fade-right">
           {project.codeUrl && (
             <a
               href={project.codeUrl}

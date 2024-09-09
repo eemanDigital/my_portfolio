@@ -26,8 +26,10 @@ const Hero = () => {
         <img src={desktopImg} alt="Profile" className={styles.profileImage} />
       </div>
       <div className={styles.heroContainer}>
-        <h1 className={styles.heroTitle}>Lukman Asinmi</h1>
-        <p className={styles.heroDescription}>
+        <h1 className={styles.heroTitle} data-aos="fade-up">
+          Lukman Asinmi
+        </h1>
+        <p className={styles.heroDescription} data-aos="fade-up">
           <span className={styles.profession}>{currentProfession}</span>
         </p>
         <ScrollLink smooth={true} duration={500} to="contact">

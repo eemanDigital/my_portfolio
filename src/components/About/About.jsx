@@ -4,7 +4,6 @@ import { SiMongodb, SiExpress, SiJavascript } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { IoIosPerson } from "react-icons/io";
-
 import styles from "./about.module.css";
 import TitleHeader from "../TitleHeader/TitleHeader";
 import Certificate from "../CERT/Certificate";
@@ -23,7 +22,7 @@ const skills = [
 const About = () => {
   return (
     <section className={styles.about} id="about">
-      <TitleHeader title="About Me" icon={<IoIosPerson size={40} />} />
+      <TitleHeader title="About Me" icon={<IoIosPerson size={20} />} />
       <div className={styles.aboutContainer}>
         <div className={styles.aboutHeader}>
           <div className={styles.aboutImageContainer}>
@@ -35,30 +34,30 @@ const About = () => {
           </div>
           <div className={styles.aboutTitleContainer}>
             {/* <h1 className={styles.aboutName}>Hello! I'm Lukman</h1> */}
-            <h2 className={styles.aboutTitle}>
+            <h2 className={styles.aboutTitle} data-aos="fade-up">
               Software Engineer based in Nigeria 🇳🇬
             </h2>
           </div>
         </div>
         <div className={styles.aboutContent}>
-          <p className={styles.aboutIntro}>
+          <p className={styles.aboutIntro} data-aos="fade-up">
             Hello! I'm <span className={styles.highlight}>Lukman Asinmi</span>,
             a software engineer based in Nigeria 🇳🇬.
           </p>
-          <p className={styles.aboutDescription}>
+          <p className={styles.aboutDescription} data-aos="fade-up">
             My journey began as a lawyer, but in 2020, I discovered my passion
             for software engineering. After years of managing to balance both
             fields, I took the bold step in 2023 to resign from my position as
             counsel in a law office where i was working and fully dedicate
             myself to software development.
           </p>
-          <p className={styles.aboutDescription}>
+          <p className={styles.aboutDescription} data-aos="fade-up">
             I honed my skills through a one-year Software Engineering program
             with <b>ALX Africa</b> (a leading technology training provider in
             Africa), and since then, I've been building innovative solutions
             that bridge the gap between technology and business needs.
           </p>
-          <p className={styles.aboutMotivation}>
+          <p className={styles.aboutMotivation} data-aos="fade-up">
             I'm driven by the belief that technology can transform industries,
             and I'm passionate about creating software that makes an impact.
             Every project is an opportunity to combine my legal background with
@@ -68,10 +67,12 @@ const About = () => {
 
         <div className={styles.aboutSkills}>
           <div>
-            <h3 className={styles.aboutSkillsTitle}>Technical Expertise</h3>
+            <h3 className={styles.aboutSkillsTitle} data-aos="fade-up">
+              Technical Expertise
+            </h3>
             <ul className={styles.aboutSkillsList}>
               {skills.map((skill, index) => (
-                <li key={index} className={styles.skillItem}>
+                <li key={index} className={styles.skillItem} data-aos="fade-up">
                   {skill.icon}
                   <span className={styles.skillName}>{skill.name}</span>
                 </li>

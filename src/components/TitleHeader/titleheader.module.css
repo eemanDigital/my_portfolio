@@ -31,3 +31,9 @@
 svg {
   color: var(--primary-blue-color);
 }
+
+@media (max-width: 480px) {
+  .titleHeaderTitle {
+    font-size: 1.4rem;
+  }
+}

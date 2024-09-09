@@ -8,11 +8,20 @@ import HomeLayout from "./pages/home/HomeLayout";
 import Home from "./pages/home/Home";
 import ProjectDetail from "./pages/ProjectDetails/ProjectDetail";
 import styles from "./app.module.css";
+import "aos/dist/aos.css";
+import AOS from "aos";
 import { ThemeContext, ThemeProvider } from "./context/ThemeContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 function App() {
-  // const { lightTheme, toggleTheme } = useContext(ThemeContext);
+  // scroll animation handler
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: "ease-in-out", // Easing function
+      once: true, // Whether animation should happen only once
+    });
+  }, []);
 
   const router = createBrowserRouter(
     createRoutesFromElements(

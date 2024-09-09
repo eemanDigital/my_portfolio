@@ -61,37 +61,45 @@ const ContactForm = () => {
 
   return (
     <section className={styles.contact}>
-      <TitleHeader title="Contact" icon={<RiContactsBook3Line size={40} />} />
+      <TitleHeader title="Contact" icon={<RiContactsBook3Line size={20} />} />
 
-      <div className={styles.contactFormContainer}>
+      <div className={styles.contactFormContainer} data-aos="fade-up">
         <ToastContainer />
         <form ref={form} onSubmit={sendEmail}>
           <div className={styles.formGroup}>
             <label htmlFor="user_name">Name</label>
             <input type="text" name="user_name" id="user_name" required />
             {formErrors.user_name && (
-              <span className={styles.error}>{formErrors.user_name}</span>
+              <span className={`${styles.error} ${styles.visible}`}>
+                {formErrors.user_name}
+              </span>
             )}
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="user_email">Email</label>
             <input type="email" name="user_email" id="user_email" required />
             {formErrors.user_email && (
-              <span className={styles.error}>{formErrors.user_email}</span>
+              <span className={`${styles.error} ${styles.visible}`}>
+                {formErrors.user_email}
+              </span>
             )}
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="subject">Subject</label>
             <input type="text" name="subject" id="subject" required />
             {formErrors.subject && (
-              <span className={styles.error}>{formErrors.subject}</span>
+              <span className={`${styles.error} ${styles.visible}`}>
+                {formErrors.subject}
+              </span>
             )}
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" required></textarea>
             {formErrors.message && (
-              <span className={styles.error}>{formErrors.message}</span>
+              <span className={`${styles.error} ${styles.visible}`}>
+                {formErrors.message}
+              </span>
             )}
           </div>
           <button type="submit" className={styles.submitButton}>

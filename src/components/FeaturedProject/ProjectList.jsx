@@ -7,7 +7,7 @@ import styles from "./projectList.module.css";
 const ProjectList = () => {
   return (
     <div className={styles.featuredListContainer} id="projects">
-      <TitleHeader title="My Projects" icon={<BsListTask size={40} />} />
+      <TitleHeader title="My Projects" icon={<BsListTask size={20} />} />
       <div className={styles.projectList}>
         {project_data.map((project) => (
           <Project key={project.id} project={project} />

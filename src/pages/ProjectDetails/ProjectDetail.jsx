@@ -19,11 +19,15 @@ const ProjectDetail = () => {
   return (
     <div className={styles.projectDetail}>
       <header className={styles.projectHeader}>
-        <h1 className={styles.projectTitle}>{project.title}</h1>
-        <p className={styles.projectTagline}>{project.shortDescription}</p>
+        <h1 className={styles.projectTitle} data-aos="fade-up">
+          {project.title}
+        </h1>
+        <p className={styles.projectTagline} data-aos="fade-up">
+          {project.shortDescription}
+        </p>
       </header>
 
-      <section className={styles.projectShowcase}>
+      <section className={styles.projectShowcase} data-aos="fade-up">
         <img
           src={project.image}
           alt={project.title}
@@ -31,14 +35,14 @@ const ProjectDetail = () => {
         />
       </section>
 
-      <section className={styles.projectInfo}>
-        <div className={styles.projectDescription}>
+      <section className={styles.projectInfo} data-aos="fade-up">
+        <div className={styles.projectDescription} data-aos="fade-up">
           <h2>About the Project</h2>
           <p>{project.fullDescription}</p>
         </div>
 
-        <div className={styles.projectMetadata}>
-          <div className={styles.metadataItem}>
+        <div className={styles.projectMetadata} data-aos="fade-up">
+          <div className={styles.metadataItem} data-aos="fade-up">
             <h3>Technologies Used</h3>
             <ul className={styles.technologyList}>
               {project.technologies.map((tech, index) => (
@@ -49,19 +53,19 @@ const ProjectDetail = () => {
             </ul>
           </div>
 
-          <div className={styles.metadataItem}>
+          <div className={styles.metadataItem} data-aos="fade-up">
             <h3>Project Timeline</h3>
             <p>{project.timeline}</p>
           </div>
 
-          <div className={styles.metadataItem}>
+          <div className={styles.metadataItem} data-aos="fade-up">
             <h3>My Role</h3>
             <p>{project.role}</p>
           </div>
         </div>
       </section>
 
-      <section className={styles.projectChallenges}>
+      <section className={styles.projectChallenges} data-aos="fade-up">
         <h2>Challenges and Solutions</h2>
         <ul className={styles.challengesList}>
           {project.challenges.map((challenge, index) => (
@@ -76,7 +80,7 @@ const ProjectDetail = () => {
         </ul>
       </section>
 
-      <section className={styles.projectOutcomes}>
+      <section className={styles.projectOutcomes} data-aos="fade-up">
         <h2>Outcomes and Achievements</h2>
         <ul className={styles.outcomesList}>
           {project.outcomes.map((outcome, index) => (
@@ -87,7 +91,7 @@ const ProjectDetail = () => {
         </ul>
       </section>
 
-      <footer className={styles.projectFooter}>
+      <footer className={styles.projectFooter} data-aos="fade-up">
         <a
           href={project.siteUrl}
           className={styles.ctaButton}

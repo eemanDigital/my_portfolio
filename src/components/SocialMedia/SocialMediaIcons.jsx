@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,7 +11,7 @@ const SocialMediaIcons = () => {
   return (
     <div className={styles.socialMediaIcons}>
       <ul>
-        <li>
+        <li data-aos="fade-right">
           <a
             href="https://facebook.com"
             target="_blank"
@@ -20,7 +19,7 @@ const SocialMediaIcons = () => {
             <FaFacebookF className={styles.icon} />
           </a>
         </li>
-        <li>
+        <li data-aos="fade-right">
           <a
             href="https://instagram.com"
             target="_blank"
@@ -28,7 +27,7 @@ const SocialMediaIcons = () => {
             <FaInstagram className={styles.icon} />
           </a>
         </li>
-        <li>
+        <li data-aos="fade-right">
           <a
             href="https://twitter.com"
             target="_blank"
@@ -36,7 +35,7 @@ const SocialMediaIcons = () => {
             <FaTwitter className={styles.icon} />
           </a>
         </li>
-        <li>
+        <li data-aos="fade-right">
           <a
             href="https://linkedin.com"
             target="_blank"
@@ -44,7 +43,7 @@ const SocialMediaIcons = () => {
             <FaLinkedinIn className={styles.icon} />
           </a>
         </li>
-        <li>
+        <li data-aos="fade-right">
           <a
             href="https://github.com"
             target="_blank"

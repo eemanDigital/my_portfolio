@@ -45,6 +45,7 @@
 
 .projectDescription {
   flex: 2;
+  text-align: justify;
 }
 
 .projectMetadata {

@@ -1,6 +1,5 @@
 .about {
   padding: 4rem 2rem;
-  /* background: var(--foreground-color); */
   color: var(--secondary-text-color);
 }
 
@@ -180,6 +179,10 @@
 }
 
 @media (max-width: 480px) {
+  .about {
+    padding: 0 0.7rem;
+    color: var(--secondary-text-color);
+  }
   .skillItem {
     justify-content: center;
     align-items: center;
