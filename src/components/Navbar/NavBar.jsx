@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
-import styles from "./Navbar.module.css";
+import styles from "./navbar.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
