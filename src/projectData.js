@@ -108,7 +108,7 @@ export const project_data = [
       "Improved skills in state management and component reusability.",
       "Gained proficiency in designing responsive and user-friendly interfaces using CSS.",
     ],
-    siteUrl: "https://example.com/tictactoe", // Replace with the actual live demo URL
+    siteUrl: "https://github.com/eemanDigital/my_portfolio.git", // Replace with the actual live demo URL
     codeUrl: "https://github.com/eemanDigital/tic-tac-toe_app", // Replace with the actual GitHub repository URL
   },
 ];

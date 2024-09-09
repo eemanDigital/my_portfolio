@@ -53,6 +53,7 @@
 .profession {
   display: inline-block;
   background-color: white;
+  padding: 0 0.7rem;
   border-radius: 1rem;
   min-width: 250px;
   font-weight: 700;
@@ -125,6 +126,13 @@
     font-size: 1rem;
   }
 
+  /* .backgroundImageContainer {
+    height: 60%;
+  } */
+
+  .profileImage {
+    height: 70%;
+  }
   .profession {
     min-width: 150px;
   }

@@ -1,12 +1,12 @@
 .contact {
-  padding: 5rem;
+  padding: 4rem;
   position: relative;
   overflow: hidden;
-  /* background-color: var(--foreground-color); */
 }
 
 .contactFormContainer {
-  max-width: 400px;
+  max-width: 100%;
+  max-width: 500px;
   margin: 4rem auto;
   padding: 2rem;
   background-color: var(--primary-white-color);
@@ -49,7 +49,7 @@ textarea {
 
 .submitButton {
   width: 100%;
-  padding: 0.75rem;
+  /* padding: 0.75rem; */
   background-color: var(--primary-blue-color);
   color: var(--primary-text-color);
   border: none;
@@ -63,9 +63,55 @@ textarea {
   background-color: #357abd;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem;
+  }
+
   .contactFormContainer {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  .contactFormTitle {
+    font-size: 1.25rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
     padding: 1rem;
+  }
+
+  .contactFormContainer {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .contactFormTitle {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .submitButton {
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 

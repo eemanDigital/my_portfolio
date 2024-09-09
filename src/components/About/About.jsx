@@ -52,7 +52,7 @@ const About = () => {
             counsel in a law office where i was working and fully dedicate
             myself to software development.
           </p>
-          <p className={styles.aboutDetails}>
+          <p className={styles.aboutDescription}>
             I honed my skills through a one-year Software Engineering program
             with <b>ALX Africa</b> (a leading technology training provider in
             Africa), and since then, I've been building innovative solutions
