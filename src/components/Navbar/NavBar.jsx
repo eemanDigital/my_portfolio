@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import styles from "./Navbar.module.css";
-import Button from "../Button/Button";
+import { ThemeContext } from "../../context/ThemeContext";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { lightTheme, toggleTheme } = useContext(ThemeContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} data-theme={lightTheme ? "light" : "dark"}>
       <div className={styles.navbarContainer}>
         <a href="/" className={styles.navbarLogo}>
           Lukman Asinmi
@@ -31,8 +33,10 @@ const Navbar = () => {
         <ul
           className={`${styles.navbarMenu} ${isMenuOpen ? styles.active : ""}`}>
           <button className={styles.navbarClose} onClick={toggleMenu}>
-            <FaTimes />
+            <FaTimes id="icon" />
           </button>
+
+          <ThemeToggle lightTheme={lightTheme} toggleTheme={toggleTheme} />
           <li>
             <a href="/" className={styles.navbarItem} onClick={toggleMenu}>
               Home
@@ -42,7 +46,7 @@ const Navbar = () => {
             <ScrollLink
               to="about"
               smooth={true}
-              duration={500}
+              duration={200}
               className={styles.navbarItem}
               onClick={toggleMenu}>
               About
@@ -76,7 +80,7 @@ const Navbar = () => {
         </ul>
         {!isMenuOpen && (
           <button className={styles.navbarToggle} onClick={toggleMenu}>
-            <FaBars />
+            <FaBars id="icon" />
           </button>
         )}
       </div>

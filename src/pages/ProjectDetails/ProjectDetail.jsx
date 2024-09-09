@@ -1,12 +1,16 @@
+// ProjectDetail.jsx
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { featuredProjects } from "../../featuredProjects";
-import styles from "./ProjectDetail.module.css";
+import { project_data } from "../../projectData";
+import styles from "./projectDetail.module.css";
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const project = featuredProjects.find(
-    (project) => project.id === parseInt(id)
-  );
+  const project = project_data.find((project) => project.id === parseInt(id));
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project) {
     return <p className={styles.notFound}>Project not found.</p>;
@@ -59,9 +63,9 @@ const ProjectDetail = () => {
 
       <section className={styles.projectChallenges}>
         <h2>Challenges and Solutions</h2>
-        <ul>
+        <ul className={styles.challengesList}>
           {project.challenges.map((challenge, index) => (
-            <li key={index}>
+            <li key={index} className={styles.challengeItem}>
               <h3>{challenge.title}</h3>
               <p>{challenge.description}</p>
               <p>
@@ -74,9 +78,11 @@ const ProjectDetail = () => {
 
       <section className={styles.projectOutcomes}>
         <h2>Outcomes and Achievements</h2>
-        <ul>
+        <ul className={styles.outcomesList}>
           {project.outcomes.map((outcome, index) => (
-            <li key={index}>{outcome}</li>
+            <li key={index} className={styles.outcomeItem}>
+              {outcome}
+            </li>
           ))}
         </ul>
       </section>

@@ -1,22 +1,15 @@
 :root {
-  --hero-background-color: linear-gradient(
-      to bottom right,
-      #001099 15%,
-      transparent
-    ),
-    radial-gradient(
-        circle at 100% 0%,
-        rgba(255, 255, 255, 0.2) 10%,
-        transparent 20%
-      )
-      center center / 15px 15px,
-    linear-gradient(to bottom right, #001099, #57add8);
+  --hero-background-color: #5c6cfe;
+  --hero-bg: rgb(0, 136, 255);
   --background-primary-color: #f3f6f8;
   --primary-text-color: #f3f6f8;
   --secondary-text-color: #1a202c;
   --primary-white-color: #ffffff;
   --primary-blue-color: #001099;
+  --bg-tag: #7b7b7b;
+
   --primary-light-blue-color: #4792de;
+  --accent-color: rgb(128, 68, 0);
 }
 
 /* // dark theme */
@@ -57,13 +50,14 @@
         transparent 1px
       )
       repeat;
-
+  --hero-bg: var(--hero-background-color);
   --background-primary-color: #282828;
   --primary-text-color: #f3f6f8;
   --secondary-text-color: #f3f6f8;
   --primary-white-color: #3f3f3f;
   --primary-blue-color: #fcfcff;
   --primary-light-blue-color: #4792de;
+  --accent-color: rgb(128, 38, 0);
 }
 
 body,
@@ -81,13 +75,8 @@ html {
 
 body {
   overflow-x: hidden;
-  /* background: var(--background-primary-color); */
 }
 
 a {
   cursor: pointer;
 }
-
-/* .app {
-  background: var(--background-primary-color);
-} */

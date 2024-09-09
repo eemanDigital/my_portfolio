@@ -1,4 +1,4 @@
-import { featuredProjects } from "../../featuredProjects";
+import { project_data } from "../../projectData";
 import TitleHeader from "../TitleHeader/TitleHeader";
 import { BsListTask } from "react-icons/bs";
 import Project from "./Project";
@@ -9,7 +9,7 @@ const ProjectList = () => {
     <div className={styles.featuredListContainer} id="projects">
       <TitleHeader title="My Projects" icon={<BsListTask size={40} />} />
       <div className={styles.projectList}>
-        {featuredProjects.map((project) => (
+        {project_data.map((project) => (
           <Project key={project.id} project={project} />
         ))}
       </div>

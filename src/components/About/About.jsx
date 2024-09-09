@@ -1,4 +1,4 @@
-import profileImage from "../../assets/profileImage.jpg"; // Update with the actual path to your image
+import profileImage from "../../assets/profileImage.jpg";
 import { FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiJavascript } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -43,21 +43,29 @@ const About = () => {
         <div className={styles.aboutContent}>
           <p className={styles.aboutIntro}>
             Hello! I'm <span className={styles.highlight}>Lukman Asinmi</span>,
-            a software engineer based in Nigeria 🇳🇬 with over 5 years of
-            experience in the field.
+            a software engineer based in Nigeria 🇳🇬.
           </p>
           <p className={styles.aboutDescription}>
-            My journey in software engineering has been marked by continuous
-            learning, exploration, and leadership. I've had the privilege of
-            building applications and solutions across various sectors, serving
-            both small businesses and large enterprises.
+            My journey began as a lawyer, but in 2020, I discovered my passion
+            for software engineering. After years of managing to balance both
+            fields, I took the bold step in 2023 to resign from my position as
+            counsel in a law office where i was working and fully dedicate
+            myself to software development.
+          </p>
+          <p className={styles.aboutDetails}>
+            I honed my skills through a one-year Software Engineering program
+            with <b>ALX Africa</b> (a leading technology training provider in
+            Africa), and since then, I've been building innovative solutions
+            that bridge the gap between technology and business needs.
           </p>
           <p className={styles.aboutMotivation}>
-            I'm driven by the challenge of creating impactful solutions that
-            users love and that meet critical business needs. To me, every line
-            of code is an opportunity to make a difference.
+            I'm driven by the belief that technology can transform industries,
+            and I'm passionate about creating software that makes an impact.
+            Every project is an opportunity to combine my legal background with
+            engineering to deliver user-centric and business-focused solutions.
           </p>
         </div>
+
         <div className={styles.aboutSkills}>
           <div>
             <h3 className={styles.aboutSkillsTitle}>Technical Expertise</h3>

@@ -47,6 +47,7 @@ const Project = ({ project }) => {
               <FaGlobe /> Site
             </a>
           )}
+
           <Link
             to={`/projects/${project.id}/detail`}
             className={styles.actionButton}>

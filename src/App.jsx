@@ -3,18 +3,16 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
-  // Navigate,
 } from "react-router-dom";
 import HomeLayout from "./pages/home/HomeLayout";
 import Home from "./pages/home/Home";
 import ProjectDetail from "./pages/ProjectDetails/ProjectDetail";
-import { useEffect, useState } from "react";
-import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
-
 import styles from "./app.module.css";
+import { ThemeContext, ThemeProvider } from "./context/ThemeContext";
+import { useContext } from "react";
 
 function App() {
-  const [lightTheme, setLightTheme] = useState(true);
+  // const { lightTheme, toggleTheme } = useContext(ThemeContext);
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,23 +25,20 @@ function App() {
     )
   );
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setLightTheme(false);
-    }
-  }, []);
+  return (
+    <ThemeProvider>
+      <ThemedApp router={router} />
+    </ThemeProvider>
+  );
+}
 
-  const toggleTheme = () => {
-    setLightTheme(!lightTheme);
-    localStorage.setItem("theme", lightTheme ? "dark" : "light");
-  };
+function ThemedApp({ router }) {
+  const { lightTheme } = useContext(ThemeContext);
 
   return (
-    <main className={styles.app} data-theme={lightTheme ? "light" : "dark"}>
-      <ThemeToggle lightTheme={lightTheme} toggleTheme={toggleTheme} />
+    <div className={styles.app} data-theme={lightTheme ? "light" : "dark"}>
       <RouterProvider router={router} />
-    </main>
+    </div>
   );
 }
 

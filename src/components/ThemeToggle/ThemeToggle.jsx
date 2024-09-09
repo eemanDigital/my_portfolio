@@ -1,5 +1,6 @@
-import { FiSun, FiMoon } from "react-icons/fi";
-import styles from "./themeToggle.module.css";
+import React from "react";
+import { FiMoon, FiSun } from "react-icons/fi";
+import styles from "./ThemeToggle.module.css";
 
 const ThemeToggle = ({ lightTheme, toggleTheme }) => {
   return (
