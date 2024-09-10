@@ -78,9 +78,8 @@
 .btn {
   background-color: transparent;
   color: var(--primary-text-color);
-  width: 188px;
   padding: 0.75rem 1.5rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   border: 2px solid var(--primary-text-color);
   border-radius: 5px;
   cursor: pointer;
@@ -101,8 +100,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 55%;
-    height: 70vh;
+    width: 50%;
+    height: 62vh;
     flex-direction: column;
     background: var(--background-primary-color);
     z-index: 100;
@@ -188,6 +187,7 @@
   .btn {
     background-color: var(--primary-light-blue-color);
     color: var(--primary-text-color);
+    margin-left: 0;
   }
 
   .btn:hover {

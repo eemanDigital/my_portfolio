@@ -10,7 +10,7 @@ export const project_data = [
     image: screenshot2,
 
     fullDescription:
-      "CaseMaster App is a comprehensive case management solution tailored for law firms to efficiently manage legal cases and administrative tasks. It offers a unified platform to handle case tracking, client and staff coordination, document management, billing, and reporting.\nThe application integrates email notifications, ensuring stakeholders are promptly informed about case updates. With features like Role-Based Access Control (RBAC), calendar event management, and dynamic reporting, CaseMaster not only enhances productivity but also improves transparency with its client-facing dashboard. Its secure, responsive design ensures ease of use across devices, empowering legal teams to streamline their workflows.",
+      "CaseMaster App is a comprehensive case management solution tailored for law firms to efficiently manage legal cases and administrative tasks. It offers a unified platform to handle case tracking, client and staff coordination, document management, billing, search data search functionality, and reporting. The application integrates email notifications, ensuring stakeholders are promptly informed about case updates. With features like Role-Based Access Control (RBAC), calendar event management, and dynamic reporting, CaseMaster not only enhances productivity but also improves transparency with its client-facing dashboard. It is secure, responsive design ensures ease of use across devices, empowering legal teams to streamline their workflows.",
 
     technologies: [
       "React",
@@ -108,7 +108,7 @@ export const project_data = [
       "Improved skills in state management and component reusability.",
       "Gained proficiency in designing responsive and user-friendly interfaces using CSS.",
     ],
-    siteUrl: "https://github.com/eemanDigital/my_portfolio.git", // Replace with the actual live demo URL
+    siteUrl: "https://tic-tac-toe-app-mu-lemon.vercel.app/", // Replace with the actual live demo URL
     codeUrl: "https://github.com/eemanDigital/tic-tac-toe_app", // Replace with the actual GitHub repository URL
   },
 ];

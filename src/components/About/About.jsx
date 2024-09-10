@@ -1,6 +1,6 @@
 import profileImage from "../../assets/profileImage.jpg";
-import { FaReact, FaNodeJs, FaHtml5 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiJavascript } from "react-icons/si";
+import { FaReact, FaNodeJs, FaHtml5, FaGitAlt } from "react-icons/fa";
+import { SiMongodb, SiExpress, SiJavascript, SiPostman } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { AiOutlineAntDesign } from "react-icons/ai";
 import { IoIosPerson } from "react-icons/io";
@@ -17,6 +17,8 @@ const skills = [
   { name: "MongoDB", icon: <SiMongodb /> },
   { name: "Ant Design", icon: <AiOutlineAntDesign /> },
   { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
+  { name: "Git", icon: <FaGitAlt /> },
+  { name: "Postman", icon: <SiPostman /> },
 ];
 
 const About = () => {

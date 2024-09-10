@@ -1,8 +1,8 @@
 /* Base Styles for Social Media Icons Component */
 .socialMediaIcons {
   position: fixed;
-  top: 70%;
-  right: 0;
+  top: 40%;
+  right: 3%;
 
   transform: translateY(-50%);
   z-index: 100;

@@ -74,13 +74,13 @@ const Navbar = () => {
           </li>
           <li>
             <button className={styles.btn} onClick={handleDownloadResume}>
-              Download Resume
+              Resume
             </button>
           </li>
         </ul>
         {!isMenuOpen && (
           <button className={styles.navbarToggle} onClick={toggleMenu}>
-            <FaBars id="icon" />
+            <FaBars color="#ffff" id="icon" />
           </button>
         )}
       </div>

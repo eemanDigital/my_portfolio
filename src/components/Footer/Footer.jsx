@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import styles from "./footer.module.css";
 
 const Footer = () => {
@@ -35,21 +35,28 @@ const Footer = () => {
           <h3>Connect</h3>
           <div className={styles.socialLinks}>
             <a
-              href="https://github.com/yourusername"
+              href="https://www.facebook.com/share/23GfyLNABwGRsg8G/?mibextid=qi2Omg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook">
+              <FaFacebookF className={styles.socialIcon} />
+            </a>
+            <a
+              href="https://github.com/eemanDigital"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub">
               <FaGithub className={styles.socialIcon} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/lukman-asinmi-359512257"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn">
               <FaLinkedin className={styles.socialIcon} />
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://x.com/LuqmanAsinmi"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter ">
