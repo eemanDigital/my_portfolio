@@ -44,9 +44,14 @@ const ContactForm = () => {
     }
 
     emailjs
-      .sendForm("service_hgdz10r", "template_ljrkt65", form.current, {
-        publicKey: "tCvGvvhyshhPv3Q6t",
-      })
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           toast.success("Email sent successfully!");
