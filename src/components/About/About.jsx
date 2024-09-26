@@ -6,7 +6,6 @@ import { AiOutlineAntDesign } from "react-icons/ai";
 import { IoIosPerson } from "react-icons/io";
 import styles from "./about.module.css";
 import TitleHeader from "../TitleHeader/TitleHeader";
-import Certificate from "../CERT/Certificate";
 
 const skills = [
   { name: "JavaScript (ES6+)", icon: <SiJavascript /> },
@@ -35,19 +34,18 @@ const About = () => {
             />
           </div>
           <div className={styles.aboutTitleContainer}>
-            {/* <h1 className={styles.aboutName}>Hello! I'm Lukman</h1> */}
             <h2 className={styles.aboutTitle} data-aos="fade-up">
               Software Engineer based in Nigeria 🇳🇬
             </h2>
           </div>
         </div>
         <div className={styles.aboutContent}>
-          <p className={styles.aboutIntro} data-aos="fade-up">
+          <p className={styles.aboutIntro} data-aos="fade-in">
             Hello! I'm <span className={styles.highlight}>Lukman Asinmi</span>,
             a software engineer based in Nigeria 🇳🇬.
           </p>
 
-          <p className={styles.aboutDescription} data-aos="fade-up">
+          <p className={styles.aboutDescription} data-aos="fade-in">
             My journey began as a lawyer, but in 2020, I discovered my passion
             for software engineering. I embarked on a self-taught path in 2020,
             diving deep into various programming languages and technologies.
@@ -56,14 +54,14 @@ const About = () => {
             intensive one-year curriculum.
           </p>
 
-          <p className={styles.aboutDescription} data-aos="fade-up">
+          <p className={styles.aboutDescription} data-aos="fade-in">
             Driven by my growing passion for technology, I made the bold
             decision to transition fully into software development. This move
             allowed me to focus entirely on building innovative solutions that
             bridge the gap between technology and business needs.
           </p>
 
-          <p className={styles.aboutMotivation} data-aos="fade-up">
+          <p className={styles.aboutMotivation} data-aos="fade-in">
             I'm motivated by the transformative power of technology across
             industries. My unique background in law, combined with my software
             engineering skills, allows me to approach problems from multiple
