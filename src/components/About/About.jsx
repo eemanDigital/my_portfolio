@@ -46,24 +46,29 @@ const About = () => {
             Hello! I'm <span className={styles.highlight}>Lukman Asinmi</span>,
             a software engineer based in Nigeria 🇳🇬.
           </p>
+
           <p className={styles.aboutDescription} data-aos="fade-up">
             My journey began as a lawyer, but in 2020, I discovered my passion
-            for software engineering. After years of managing to balance both
-            fields, I took the bold step in 2023 to resign from my position as
-            counsel in a law office where i was working and fully dedicate
-            myself to software development.
+            for software engineering. I embarked on a self-taught path in 2020,
+            diving deep into various programming languages and technologies.
+            This dedication led me to the ALX Africa Software Engineering
+            program in 2022, where I further honed my skills through their
+            intensive one-year curriculum.
           </p>
+
           <p className={styles.aboutDescription} data-aos="fade-up">
-            I honed my skills through a one-year Software Engineering program
-            with <b>ALX Africa</b> (a leading technology training provider in
-            Africa), and since then, I've been building innovative solutions
-            that bridge the gap between technology and business needs.
+            Driven by my growing passion for technology, I made the bold
+            decision to transition fully into software development. This move
+            allowed me to focus entirely on building innovative solutions that
+            bridge the gap between technology and business needs.
           </p>
+
           <p className={styles.aboutMotivation} data-aos="fade-up">
-            I'm driven by the belief that technology can transform industries,
-            and I'm passionate about creating software that makes an impact.
-            Every project is an opportunity to combine my legal background with
-            engineering to deliver user-centric and business-focused solutions.
+            I'm motivated by the transformative power of technology across
+            industries. My unique background in law, combined with my software
+            engineering skills, allows me to approach problems from multiple
+            angles. I'm passionate about creating impactful software that
+            delivers user-centric and business-focused solutions.
           </p>
         </div>
 
