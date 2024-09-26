@@ -88,6 +88,11 @@
     color 0.3s ease;
 }
 
+.btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .btn:hover {
   background-color: transparent;
   border-color: var(--primary-text-color);

@@ -4,6 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 import styles from "./navbar.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -73,8 +74,10 @@ const Navbar = () => {
             </ScrollLink>
           </li>
           <li>
-            <button className={styles.btn} onClick={handleDownloadResume}>
-              Resume
+            <button className={styles.btn}>
+              <Link to="https://docs.google.com/document/d/16c7T6GkG7dvxl6Y1dsjszAVZJ5tJpX2vADTbVr676tY/edit?usp=sharing">
+                Resume
+              </Link>
             </button>
           </li>
         </ul>

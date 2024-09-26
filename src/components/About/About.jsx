@@ -82,7 +82,7 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <Certificate />
+        {/* <Certificate /> */}
       </div>
     </section>
   );

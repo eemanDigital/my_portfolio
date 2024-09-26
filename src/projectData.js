@@ -1,5 +1,6 @@
 import screenshot2 from "./assets/screenshot2.png";
 import tictactoeImg from "./assets/tictactoe.png";
+import eemanTechImg from "./assets/eemanTech.png";
 
 export const project_data = [
   {
@@ -23,7 +24,6 @@ export const project_data = [
       "Redux",
       "Pug",
       "handlebars",
-      "moment",
       "Nodemailer",
     ],
     timeline: "March 2024 - September 2024",
@@ -77,6 +77,60 @@ export const project_data = [
 
   {
     id: 2,
+    header: "Other Project",
+    title: "Business Registration Services Website",
+    shortDescription:
+      "A full-stack web application tailored for business registration services",
+    image: eemanTechImg,
+
+    fullDescription:
+      "A full-stack web application designed for business registration services, built using the MERN stack and SCSS. The platform features a responsive front-end with an intuitive UI and an admin dashboard for managing blog posts. The application also integrates a simple blog feature to enhance SEO and showcase services offered.",
+
+    technologies: ["React", "Node.js", "Express", "MongoDB", "SCSS"],
+    timeline: "November 2024 - February 2024",
+    role: "Sole Developer",
+
+    features: [
+      "Authentication and Authorization",
+      "Display of Services Rendered",
+      "Simple Blog Feature",
+      "Admin Dashboard for Managing Posts",
+    ],
+
+    challenges: [
+      {
+        title: "Authentication and Authorization",
+        description:
+          "Implementing secure authentication and authorization mechanisms to ensure that only authorized users can access sensitive admin functionalities, while maintaining a smooth user experience.",
+      },
+      {
+        title: "Responsive UI Design",
+        description:
+          "Ensuring the website remains visually appealing and fully functional across various devices, particularly mobile, to provide the best user experience for all users.",
+      },
+      {
+        title: "SEO Optimization",
+        description:
+          "Enhancing the blog feature to improve the website's search engine visibility, making sure content is properly structured for both users and search engine crawlers.",
+      },
+      {
+        title: "Efficient Data Handling",
+        description:
+          "Optimizing the admin dashboard and form management to handle data efficiently, especially with regard to blog post updates and site content management.",
+      },
+      {
+        title: "Scalability",
+        description:
+          "Building the architecture in a way that allows easy scalability, both for traffic increases and for the potential addition of new services and features.",
+      },
+    ],
+
+    siteUrl: "https://eemantech-app.vercel.app",
+    codeUrl: "https://github.com/eemanDigital/modern_business_app",
+  },
+
+  {
+    id: 3,
     title: "TicTacToe App",
     header: "Other Project",
     shortDescription: "A simple TicTacToe game application.",
