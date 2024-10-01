@@ -33,7 +33,7 @@ const Hero = () => {
           <span className={styles.profession}>{currentProfession}</span>
         </p>
         <ScrollLink smooth={true} duration={500} to="contact">
-          <button className={styles.btn}>Get in touch</button>
+          <button className={styles.btn}>Get in Touch</button>
         </ScrollLink>
       </div>
     </div>

@@ -71,7 +71,7 @@ export const project_data = [
       "Enhanced user engagement with real-time notifications and dynamic reporting.",
       "Improved client satisfaction by providing a transparent and accessible client dashboard.",
     ],
-    siteUrl: "https://case-master-app.vercel.app/",
+    siteUrl: "https://youtu.be/VspUllQbS-c?si=0Gcb7ObrXhUvRSVr",
     codeUrl: "https://github.com/eemanDigital/case-master-app",
   },
 

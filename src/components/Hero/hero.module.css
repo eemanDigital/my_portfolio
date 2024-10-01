@@ -59,7 +59,7 @@
   font-weight: 700;
   color: var(--accent-color);
   letter-spacing: 1.3px;
-  transition: all 0.9s ease;
+  transition: all 2s ease;
 }
 
 .btn {
@@ -67,17 +67,20 @@
   color: var(--primary-text-color);
   width: 200px;
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--primary-text-color);
+  border: 1px solid var(--primary-text-color);
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 200;
+  font-size: 1.02rem;
   transition: background-color 0.3s ease, border-color 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  background-color: var(--primary-text-color);
-  color: var(--hero-background-color);
+  background: linear-gradient(135deg, #0073e6, #4fc3f7);
+  color: #fff;
+  border-color: #0073e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Styles */

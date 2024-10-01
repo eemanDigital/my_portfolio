@@ -45,8 +45,8 @@ const ProjectDetail = () => {
           <div className={styles.metadataItem} data-aos="fade-up">
             <h3>Technologies Used</h3>
             <ul className={styles.technologyList}>
-              {project.technologies.map((tech, index) => (
-                <li key={index} className={styles.technologyItem}>
+              {project?.technologies?.map((tech, index) => (
+                <li key={index} className={styles?.technologyItem}>
                   {tech}
                 </li>
               ))}
@@ -68,12 +68,12 @@ const ProjectDetail = () => {
       <section className={styles.projectChallenges} data-aos="fade-up">
         <h2>Challenges and Solutions</h2>
         <ul className={styles.challengesList}>
-          {project.challenges.map((challenge, index) => (
+          {project?.challenges?.map((challenge, index) => (
             <li key={index} className={styles.challengeItem}>
-              <h3>{challenge.title}</h3>
-              <p>{challenge.description}</p>
+              <h3>{challenge?.title}</h3>
+              <p>{challenge?.description}</p>
               <p>
-                <strong>Solution:</strong> {challenge.solution}
+                <strong>Solution:</strong> {challenge?.solution}
               </p>
             </li>
           ))}
@@ -83,7 +83,7 @@ const ProjectDetail = () => {
       <section className={styles.projectOutcomes} data-aos="fade-up">
         <h2>Outcomes and Achievements</h2>
         <ul className={styles.outcomesList}>
-          {project.outcomes.map((outcome, index) => (
+          {project?.outcomes?.map((outcome, index) => (
             <li key={index} className={styles.outcomeItem}>
               {outcome}
             </li>
