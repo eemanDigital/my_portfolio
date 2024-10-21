@@ -23,28 +23,16 @@ const skills = [
 const About = () => {
   return (
     <section className={styles.about} id="about">
-      <TitleHeader title="About Me" icon={<IoIosPerson size={20} />} />
       <div className={styles.aboutContainer}>
-        <div className={styles.aboutHeader}>
-          <div className={styles.aboutImageContainer}>
-            <img
-              src={profileImage}
-              alt="Lukman Asinmi"
-              className={styles.aboutImage}
-            />
-          </div>
-          <div className={styles.aboutTitleContainer}>
-            <h2 className={styles.aboutTitle} data-aos="fade-up">
-              Software Engineer based in Nigeria 🇳🇬
-            </h2>
-          </div>
-        </div>
-        <div className={styles.aboutContent}>
-          <p className={styles.aboutIntro} data-aos="fade-in">
-            Hello! I'm <span className={styles.highlight}>Lukman Asinmi</span>,
-            a software engineer based in Nigeria 🇳🇬.
-          </p>
+        <div>
+          <TitleHeader title="About Me" />
+          <p>I like Building Solutions </p>
 
+          <button>Download CV</button>
+          <div className={styles.socials}></div>
+        </div>
+
+        <div className={styles.aboutContent}>
           <p className={styles.aboutDescription} data-aos="fade-in">
             My journey began as a lawyer, but in 2020, I discovered my passion
             for software engineering. I embarked on a self-taught path in 2020,
@@ -69,8 +57,9 @@ const About = () => {
             delivers user-centric and business-focused solutions.
           </p>
         </div>
+      </div>
 
-        <div className={styles.aboutSkills}>
+      {/* <div className={styles.aboutSkills}>
           <div>
             <h3 className={styles.aboutSkillsTitle} data-aos="fade-up">
               Technical Expertise
@@ -84,9 +73,7 @@ const About = () => {
               ))}
             </ul>
           </div>
-        </div>
-        {/* <Certificate /> */}
-      </div>
+        </div> */}
     </section>
   );
 };

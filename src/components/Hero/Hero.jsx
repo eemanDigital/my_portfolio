@@ -1,40 +1,35 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import styles from "./hero.module.css";
-import desktopImg from "../../assets/desktop1.jpg";
+import profileImg from "../../assets/profileImage.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const [currentProfession, setCurrentProfession] = useState("");
   const professions = ["A Lawyer", "Software Developer", "Freelancer"];
-  const [professionIndex, setProfessionIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setProfessionIndex((prevIndex) => (prevIndex + 1) % professions.length);
-    }, 3000); // Change profession every 3 seconds
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  useEffect(() => {
-    setCurrentProfession(professions[professionIndex]);
-  }, [professionIndex]);
 
   return (
     <div className={styles.hero}>
-      <div className={styles.backgroundImageContainer}>
-        <img src={desktopImg} alt="Profile" className={styles.profileImage} />
-      </div>
       <div className={styles.heroContainer}>
-        <h1 className={styles.heroTitle} data-aos="fade-up">
-          Lukman Asinmi
+        <p>Hello, I am </p>
+        <h1 className={styles.heroTitle}>
+          Lukman Asinmi. Welcome to My Portfolio
         </h1>
-        <p className={styles.heroDescription} data-aos="fade-up">
-          <span className={styles.profession}>{currentProfession}</span>
-        </p>
+
+        <div className={styles.heroDescription}>
+          <span>FullStack Developer</span>
+          <span>Lawyer</span>
+        </div>
         <ScrollLink smooth={true} duration={500} to="contact">
           <button className={styles.btn}>Get in Touch</button>
         </ScrollLink>
+      </div>
+
+      <div className={styles.heroImgBox}>
+        <div className={styles.imgBoxContent}>
+          <img src={profileImg} alt="Profile" className={styles.grayscale} />
+          <h2>Need A FullStack Developer?</h2>
+          <Link to="#contact">Hire Me</Link>
+        </div>
       </div>
     </div>
   );
