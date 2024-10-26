@@ -1,6 +1,7 @@
 import styles from "./about.module.css";
 import BioDataTable from "../BioDataTable/BioDataTable";
 import { Link } from "react-router-dom";
+import { handleDownloadResume } from "../../utils/download";
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
           <p>I like Building Solutions </p>
           <Link
             className={styles.downloadBtn}
-            to="https://docs.google.com/document/d/16c7T6GkG7dvxl6Y1dsjszAVZJ5tJpX2vADTbVr676tY/edit?usp=sharing">
+            onClick={() => handleDownloadResume()}>
             <i></i>
             <i></i>
             <span> Download CV</span>

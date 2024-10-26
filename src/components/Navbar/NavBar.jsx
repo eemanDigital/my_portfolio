@@ -1,32 +1,20 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 import styles from "./navbar.module.css";
-import { ThemeContext } from "../../context/ThemeContext";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import { Link } from "react-router-dom";
+
+import { handleDownloadResume } from "../../utils/download";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { lightTheme, toggleTheme } = useContext(ThemeContext);
+  // const { lightTheme, toggleTheme } = useContext(ThemeContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // download resume handler
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href =
-      "https://drive.google.com/uc?export=download&id=18wSQrl4i4jTecuyTprp-yvBRH6X9UWfU";
-    link.download = "Lukman_Asinmi_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
-    <nav className={styles.navbar} data-theme={lightTheme ? "light" : "dark"}>
+    <nav className={styles.navbar}>
       <div className={styles.navbarContainer}>
         <a href="/" className={styles.navbarLogo}>
           Lukman Asinmi
@@ -37,7 +25,7 @@ const Navbar = () => {
             <FaTimes id="icon" />
           </button>
 
-          <ThemeToggle lightTheme={lightTheme} toggleTheme={toggleTheme} />
+          {/* <ThemeToggle lightTheme={lightTheme} toggleTheme={toggleTheme} /> */}
           <li>
             <a href="/" className={styles.navbarItem} onClick={toggleMenu}>
               Home
@@ -74,10 +62,10 @@ const Navbar = () => {
             </ScrollLink>
           </li>
           <li>
-            <button className={styles.btn}>
-              <Link to="https://docs.google.com/document/d/16c7T6GkG7dvxl6Y1dsjszAVZJ5tJpX2vADTbVr676tY/edit?usp=sharing">
-                Resume
-              </Link>
+            <button
+              className={styles.btn}
+              onClick={() => handleDownloadResume()}>
+              Resume
             </button>
           </li>
         </ul>
