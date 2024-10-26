@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "./Skills.module.css";
+import styles from "./skills.module.css";
 import TitleHeader from "../TitleHeader/TitleHeader";
 
 const Skills = ({ skills }) => {
