@@ -11,6 +11,7 @@
   --bg-tag: #7b7b7b;
   --primary-light-blue-color: #4792de;
   --accent-color: rgb(128, 68, 0);
+  --text-color-gradient: linear-gradient(to right, #1bd3eb, #ffffff);
 }
 
 /* // dark theme */
@@ -60,6 +61,17 @@
   --primary-blue-color: #fcfcff;
   --primary-light-blue-color: #4792de;
   --accent-color: rgb(128, 38, 0);
+  --text-color-gradient: linear-gradient(to right, #1bd3eb, #ffffff);
+  --hero-bg: var(--hero-background-color);
+  --background-primary: linear-gradient(to right, #16222a, #3a6073);
+  --primary-text: #b0e0e6;
+  --secondary-white: #f3f6f8;
+  --primary-blue: #1bd3eb;
+  --primary-light-blue: #4792de;
+  --accent: rgb(128, 38, 0);
+  --text-gradient: linear-gradient(to right, #1bd3eb, #ffffff);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 /* background: -webkit-linear-gradient(to right, #3A6073, #16222A);  
@@ -73,7 +85,8 @@ html {
   height: 100%;
   font-size: 15px;
   font-family: "Kanit", sans-serif;
-  font-weight: 100;
+  font-weight: 200;
+  letter-spacing: 0.5px;
   font-style: normal;
   background-color: var(--background-primary-color);
   box-sizing: border-box;

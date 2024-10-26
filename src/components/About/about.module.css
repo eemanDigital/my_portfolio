@@ -1,23 +1,31 @@
 .about {
   padding: 4rem 2rem;
-  color: var(--secondary-text-color);
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--secondary-text-color);
+  margin-bottom: 0;
+  background: var(--text-color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.bioSectionWrapper p {
+  color: var(--primary-text-color);
+  margin-top: 0;
+  font-weight: 400;
 }
 
 .aboutContainer {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  justify-content: space-around;
+  align-items: last baseline;
+
   gap: 2rem;
-  max-width: 1200px;
   margin: 0 auto;
-  align-items: start;
 }
 
 .aboutHeader {
@@ -28,60 +36,19 @@
   text-align: center;
 }
 
-.aboutImageContainer {
-  border-radius: 50%;
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  transition: transform 0.3s ease;
-}
-
-.aboutImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.aboutImageContainer:hover .aboutImage {
-  transform: scale(1.05);
-}
-
-.aboutTitleContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.aboutName {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0;
-  color: var(--secondary-text-color);
-}
-
-.aboutTitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--secondary-text-color);
-
-  margin-top: 0.5rem;
-}
-
-.aboutContent {
-  /* background-color: var(--primary-white-color); */
-
+.storyWrapper {
   padding: 2rem;
+  width: 100%;
+  max-width: 600px;
   border-radius: 12px;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); */
   transition: box-shadow 0.3s ease;
 }
 
-/* .aboutContent:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-} */
+.story {
+  text-align: justify;
+  color: var(--primary-text-color);
+  font-weight: 200;
+}
 
 .aboutIntro {
   font-size: 1rem;
@@ -103,68 +70,65 @@
   line-height: 1.6;
 }
 
-.aboutSkills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin-top: 2rem;
+.downloadBtn {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.aboutSkillsTitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--secondary-text-color);
-
-  margin-bottom: 1rem;
-  text-align: center;
+.downloadBtn i {
+  position: absolute;
+  inset: -2px;
+  display: block;
+  border-radius: 10px;
+  background: linear-gradient(85deg, #00ccff, #0e1538, #0e1538, #d400d4);
+  z-index: 1;
 }
 
-.aboutSkillsList {
+.downloadBtn i:nth-child(2) {
+  filter: blur(10px);
+}
+
+.downloadBtn:hover i {
+  animation: animateBorder 2s linear infinite;
+}
+
+@keyframes animateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.downloadBtn span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
-  padding: 0;
-  list-style: none;
-}
-
-.skillItem {
-  display: flex;
-  font-family: monospace;
-  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  padding: 1rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  cursor: pointer;
-  width: 120px;
-  text-align: center;
-}
-
-.skillItem:hover {
-  transform: translateY(-4px);
-  background-color: var(--primary-white-color);
-}
-
-.skillName {
-  font-size: 0.9rem;
-  color: var(--secondary-text-color);
-
-  font-weight: 500;
-}
-
-.skillItem svg {
-  color: var(--primary-blue-color);
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  letter-spacing: 2px;
+  border: 1px solid #040a29;
+  border-radius: 20px;
+  font-weight: 300;
+  background-color: rgba(58, 96, 115, 0.7);
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
   .aboutContainer {
-    grid-template-columns: 1fr;
-    text-align: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
   }
 
   .aboutHeader,
@@ -175,16 +139,8 @@
   .aboutContent {
     margin-top: 2rem;
   }
-}
 
-@media (max-width: 480px) {
-  .about {
-    padding: 0 0.7rem;
-    color: var(--secondary-text-color);
-  }
-  .skillItem {
-    justify-content: center;
-    align-items: center;
+  .storyWrapper {
     width: 100%;
   }
 }

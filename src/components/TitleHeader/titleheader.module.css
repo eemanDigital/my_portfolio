@@ -1,35 +1,29 @@
 .titleHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.titleHeaderTitle {
-  color: var(--secondary-text-color);
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.4rem;
+.titleHeader {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #1bd3eb, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* margin-bottom: 2rem; */
+  text-align: center;
+  position: relative;
 }
 
-.titleHeaderIconContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.titleHeaderLine {
-  width: 50px;
-  height: 1px;
-  background-color: var(--secondary-text-color);
-  margin: 0 10px;
-}
-
-.titleHeaderIcon {
-  width: 30px;
-  height: 30px;
-}
-
-svg {
-  color: var(--primary-blue-color);
+.titleHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #1bd3eb, transparent);
+  border-radius: 2px;
 }
 
 @media (max-width: 480px) {

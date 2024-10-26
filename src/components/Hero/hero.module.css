@@ -9,7 +9,7 @@
   min-height: 500px;
   width: 100%;
   overflow: hidden;
-  margin-right: 4rem;
+  /* margin-right: 4rem; */
 }
 
 .heroContainer {
@@ -59,7 +59,7 @@
   content: "";
   position: absolute;
   inset: 6px;
-  background-color: #3a6073;
+  background-color: rgba(58, 96, 115);
   border-radius: 50%;
   z-index: 1;
 }
@@ -128,7 +128,7 @@
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 0;
-  background: linear-gradient(to right, #1bd3eb, #ffffff);
+  background: var(--text-color-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -1,39 +1,28 @@
-import profileImage from "../../assets/profileImage.jpg";
-import { FaReact, FaNodeJs, FaHtml5, FaGitAlt } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiJavascript, SiPostman } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { AiOutlineAntDesign } from "react-icons/ai";
-import { IoIosPerson } from "react-icons/io";
 import styles from "./about.module.css";
-import TitleHeader from "../TitleHeader/TitleHeader";
-
-const skills = [
-  { name: "JavaScript (ES6+)", icon: <SiJavascript /> },
-  { name: "HTML & (S)CSS", icon: <FaHtml5 /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "Node.js", icon: <FaNodeJs /> },
-  { name: "Express", icon: <SiExpress /> },
-  { name: "MongoDB", icon: <SiMongodb /> },
-  { name: "Ant Design", icon: <AiOutlineAntDesign /> },
-  { name: "Tailwind CSS", icon: <RiTailwindCssFill /> },
-  { name: "Git", icon: <FaGitAlt /> },
-  { name: "Postman", icon: <SiPostman /> },
-];
+import BioDataTable from "../BioDataTable/BioDataTable";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <section className={styles.about} id="about">
       <div className={styles.aboutContainer}>
-        <div>
-          <TitleHeader title="About Me" />
+        <div className={styles.bioSectionWrapper}>
+          <h1 className={styles.title}>About Me</h1>
           <p>I like Building Solutions </p>
+          <Link
+            className={styles.downloadBtn}
+            to="https://docs.google.com/document/d/16c7T6GkG7dvxl6Y1dsjszAVZJ5tJpX2vADTbVr676tY/edit?usp=sharing">
+            <i></i>
+            <i></i>
+            <span> Download CV</span>
+          </Link>
+          <BioDataTable />
 
-          <button>Download CV</button>
           <div className={styles.socials}></div>
         </div>
 
-        <div className={styles.aboutContent}>
-          <p className={styles.aboutDescription} data-aos="fade-in">
+        <div className={styles.storyWrapper}>
+          <p className={styles.story}>
             My journey began as a lawyer, but in 2020, I discovered my passion
             for software engineering. I embarked on a self-taught path in 2020,
             diving deep into various programming languages and technologies.
@@ -42,14 +31,14 @@ const About = () => {
             intensive one-year curriculum.
           </p>
 
-          <p className={styles.aboutDescription} data-aos="fade-in">
+          <p className={styles.story}>
             Driven by my growing passion for technology, I made the bold
             decision to transition fully into software development. This move
             allowed me to focus entirely on building innovative solutions that
             bridge the gap between technology and business needs.
           </p>
 
-          <p className={styles.aboutMotivation} data-aos="fade-in">
+          <p className={styles.story}>
             I'm motivated by the transformative power of technology across
             industries. My unique background in law, combined with my software
             engineering skills, allows me to approach problems from multiple
@@ -58,22 +47,6 @@ const About = () => {
           </p>
         </div>
       </div>
-
-      {/* <div className={styles.aboutSkills}>
-          <div>
-            <h3 className={styles.aboutSkillsTitle} data-aos="fade-up">
-              Technical Expertise
-            </h3>
-            <ul className={styles.aboutSkillsList}>
-              {skills.map((skill, index) => (
-                <li key={index} className={styles.skillItem} data-aos="fade-up">
-                  {skill.icon}
-                  <span className={styles.skillName}>{skill.name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div> */}
     </section>
   );
 };

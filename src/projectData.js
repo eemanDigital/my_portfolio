@@ -1,6 +1,11 @@
 import screenshot2 from "./assets/screenshot2.png";
 import tictactoeImg from "./assets/tictactoe.png";
 import eemanTechImg from "./assets/eemanTech.png";
+import sc1 from "./assets/CM1.png";
+import sc2 from "./assets/CM2.png";
+import sc3 from "./assets/CM3.png";
+import sc4 from "./assets/CM4.png";
+import sc5 from "./assets/CM5.png";
 
 export const project_data = [
   {
@@ -8,7 +13,8 @@ export const project_data = [
     header: "Featured Project",
     title: "Case Management Application",
     shortDescription: "A Complete Case Management System for Law Firms",
-    image: screenshot2,
+    image: sc1,
+    screenshots: [sc1, sc2, sc3, sc4, sc5],
 
     fullDescription:
       "CaseMaster App is a comprehensive case management solution tailored for law firms to efficiently manage legal cases and administrative tasks. It offers a unified platform to handle case tracking, client and staff coordination, document management, billing, search data search functionality, and reporting. The application integrates email notifications, ensuring stakeholders are promptly informed about case updates. With features like Role-Based Access Control (RBAC), calendar event management, and dynamic reporting, CaseMaster not only enhances productivity but also improves transparency with its client-facing dashboard. It is secure, responsive design ensures ease of use across devices, empowering legal teams to streamline their workflows.",

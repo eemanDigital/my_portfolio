@@ -9,8 +9,8 @@ const ProjectList = () => {
     <div className={styles.featuredListContainer} id="projects">
       <TitleHeader title="My Projects" icon={<BsListTask size={20} />} />
       <div className={styles.projectList}>
-        {project_data.map((project) => (
-          <Project key={project.id} project={project} />
+        {project_data.map((project, index) => (
+          <Project key={project.id} project={project} index={index} />
         ))}
       </div>
     </div>

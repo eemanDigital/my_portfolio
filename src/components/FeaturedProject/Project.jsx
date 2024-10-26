@@ -1,67 +1,79 @@
+// Project.jsx
 import PropTypes from "prop-types";
 import { FaGithub, FaGlobe, FaInfoCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styles from "./project.module.css";
 
-const Project = ({ project }) => {
+const Project = ({ project, index }) => {
   return (
-    <div className={styles.featuredProject}>
-      <div className={styles.thumbnail}>
-        <img
-          className={styles.image}
-          src={project.image}
-          alt={project.title}
-          data-aos="fade-right"
-        />
-      </div>
-      <div className={styles.content}>
-        <h1 className={styles.title} data-aos="fade-left">
-          {project.title}
-        </h1>
-        <div
-          className={
-            project.header === "Featured Project"
-              ? styles.featuredBtn
-              : styles.header
-          }>
-          {project.header}
-        </div>
-        <hr className={styles.separator} />
-        <p className={styles.description} data-aos="zoom-out">
-          {project.fullDescription}
-        </p>
-        <div className={styles.technologies} data-aos="fade-left">
-          {project.technologies.map((tech, index) => (
-            <span key={index} className={styles.techTag}>
-              {tech}
-            </span>
-          ))}
-        </div>
-        <div className={styles.actions} data-aos="fade-right">
-          {project.codeUrl && (
-            <a
-              href={project.codeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.actionButton}>
-              <FaGithub /> Code
-            </a>
-          )}
-          {project.siteUrl && (
-            <a
-              href={project.siteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.actionButton}>
-              <FaGlobe /> Site
-            </a>
-          )}
+    <div
+      className={`${styles.projectCard} ${
+        index % 2 === 0 ? styles.even : styles.odd
+      }`}>
+      <div className={styles.glassOverlay} />
 
-          <Link
-            to={`/projects/${project.id}/detail`}
-            className={styles.actionButton}>
-            <FaInfoCircle /> Details
-          </Link>
+      <div className={styles.container}>
+        <div className={styles.imageSection}>
+          <div className={styles.imageWrapper} data-aos="zoom-in">
+            <img
+              src={project.image}
+              alt={project.title}
+              className={styles.image}
+            />
+          </div>
+        </div>
+
+        <div className={styles.contentSection} data-aos="fade-in">
+          <h1 className={styles.title}>{project.title}</h1>
+
+          <div
+            className={
+              project.header === "Featured Project"
+                ? styles.featuredBadge
+                : styles.headerBadge
+            }>
+            {project.header}
+          </div>
+
+          <div className={styles.divider} />
+
+          <p className={styles.description}>{project.fullDescription}</p>
+
+          <div className={styles.techContainer}>
+            {project.technologies.map((tech, idx) => (
+              <span key={idx} className={styles.techTag}>
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className={styles.actions}>
+            {project.codeUrl && (
+              <a
+                href={project.codeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.actionButton}>
+                <FaGithub className={styles.icon} /> Code
+              </a>
+            )}
+
+            {project.siteUrl && (
+              <a
+                href={project.siteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.actionButton}>
+                <FaGlobe className={styles.icon} /> Site
+              </a>
+            )}
+
+            <Link
+              to={`/projects/${project.id}/detail`}
+              className={styles.actionButton}>
+              <FaInfoCircle className={styles.icon} /> Details
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -79,6 +91,7 @@ Project.propTypes = {
     codeUrl: PropTypes.string,
     siteUrl: PropTypes.string,
   }).isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default Project;

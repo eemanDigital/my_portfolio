@@ -1,15 +1,12 @@
-import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import styles from "./hero.module.css";
 import profileImg from "../../assets/profileImage.jpg";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const professions = ["A Lawyer", "Software Developer", "Freelancer"];
-
   return (
     <div className={styles.hero}>
-      <div className={styles.heroContainer}>
+      <div className={styles.heroContainer} data-aos="fade-left">
         <p>Hello, I am </p>
         <h1 className={styles.heroTitle}>
           Lukman Asinmi. Welcome to My Portfolio
@@ -24,7 +21,7 @@ const Hero = () => {
         </ScrollLink>
       </div>
 
-      <div className={styles.heroImgBox}>
+      <div className={styles.heroImgBox} data-aos="zoom-in">
         <div className={styles.imgBoxContent}>
           <img src={profileImg} alt="Profile" className={styles.grayscale} />
           <h2>Need A FullStack Developer?</h2>

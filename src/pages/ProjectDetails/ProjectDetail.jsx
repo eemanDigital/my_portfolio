@@ -1,112 +1,184 @@
-// ProjectDetail.jsx
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { project_data } from "../../projectData";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaGithub,
+  FaGlobe,
+} from "react-icons/fa";
+
 import styles from "./projectDetail.module.css";
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const project = project_data.find((project) => project.id === parseInt(id));
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   if (!project) {
-    return <p className={styles.notFound}>Project not found.</p>;
+    return <div className={styles.notFound}>Project not found</div>;
   }
 
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => {
+      const newIndex = prev === project.screenshots?.length - 1 ? 0 : prev + 1;
+      const container = document.querySelector(`.${styles.imageContainer}`);
+      if (container) {
+        container.style.transform = `translateX(-${newIndex * 100}%)`;
+      }
+      return newIndex;
+    });
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => {
+      const newIndex = prev === 0 ? project.screenshots?.length - 1 : prev - 1;
+      const container = document.querySelector(`.${styles.imageContainer}`);
+      if (container) {
+        container.style.transform = `translateX(-${newIndex * 100}%)`;
+      }
+      return newIndex;
+    });
+  };
+
   return (
-    <div className={styles.projectDetail}>
-      <header className={styles.projectHeader}>
-        <h1 className={styles.projectTitle} data-aos="fade-up">
-          {project.title}
-        </h1>
-        <p className={styles.projectTagline} data-aos="fade-up">
-          {project.shortDescription}
-        </p>
-      </header>
+    <div className={styles.container}>
+      <div className={styles.hero}>
+        <h1 className={styles.title}>{project.title}</h1>
+        <p className={styles.shortDescription}>{project.shortDescription}</p>
 
-      <section className={styles.projectShowcase} data-aos="fade-up">
-        <img
-          src={project.image}
-          alt={project.title}
-          className={styles.projectImage}
-        />
-      </section>
-
-      <section className={styles.projectInfo} data-aos="fade-up">
-        <div className={styles.projectDescription} data-aos="fade-up">
-          <h2>About the Project</h2>
-          <p>{project.fullDescription}</p>
+        <div className={styles.actionButtons}>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.primaryButton}>
+              <FaGlobe size={20} />
+              Visit Live Site
+            </a>
+          )}
+          {project.sourceCode && (
+            <a
+              href={project.sourceCode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.secondaryButton}>
+              <FaGithub size={20} />
+              View Source Code
+            </a>
+          )}
         </div>
 
-        <div className={styles.projectMetadata} data-aos="fade-up">
-          <div className={styles.metadataItem} data-aos="fade-up">
-            <h3>Technologies Used</h3>
-            <ul className={styles.technologyList}>
-              {project?.technologies?.map((tech, index) => (
-                <li key={index} className={styles?.technologyItem}>
-                  {tech}
+        {project.screenshots && project.screenshots.length > 0 && (
+          <div className={styles.imageCarousel}>
+            <div className={styles.imageContainer}>
+              {project.screenshots.map((screenshot, index) => (
+                <img
+                  key={index}
+                  src={screenshot}
+                  alt={`Project screenshot ${index + 1}`}
+                  className={styles.carouselImage}
+                />
+              ))}
+            </div>
+
+            <button onClick={prevImage} className={styles.prevButton}>
+              <FaChevronLeft size={24} />
+            </button>
+            <button onClick={nextImage} className={styles.nextButton}>
+              <FaChevronRight size={24} />
+            </button>
+
+            <div className={styles.indicators}>
+              {project.screenshots.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setCurrentImageIndex(index);
+                    const container = document.querySelector(
+                      `.${styles.imageContainer}`
+                    );
+                    if (container) {
+                      container.style.transform = `translateX(-${
+                        index * 100
+                      }%)`;
+                    }
+                  }}
+                  className={
+                    currentImageIndex === index
+                      ? styles.indicatorActive
+                      : styles.indicator
+                  }
+                />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className={styles.mainContent}>
+        <div>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>About the Project</h2>
+            <p>{project.fullDescription}</p>
+          </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Challenges and Solutions</h2>
+            {project?.challenges?.map((challenge, index) => (
+              <div key={index} className={styles.challengeCard}>
+                <h3 className={styles.challengeTitle}>{challenge?.title}</h3>
+                <p className={styles.challengeDescription}>
+                  {challenge?.description}
+                </p>
+                <div className={styles.solution}>
+                  <span className={styles.solutionLabel}>Solution: </span>
+                  <span>{challenge?.solution}</span>
+                </div>
+              </div>
+            ))}
+          </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Outcomes and Achievements</h2>
+            <ul className={styles.outcomesList}>
+              {project?.outcomes?.map((outcome, index) => (
+                <li key={index} className={styles.outcomeItem}>
+                  {outcome}
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className={styles.metadataItem} data-aos="fade-up">
-            <h3>Project Timeline</h3>
-            <p>{project.timeline}</p>
-          </div>
-
-          <div className={styles.metadataItem} data-aos="fade-up">
-            <h3>My Role</h3>
-            <p>{project.role}</p>
-          </div>
+          </section>
         </div>
-      </section>
 
-      <section className={styles.projectChallenges} data-aos="fade-up">
-        <h2>Challenges and Solutions</h2>
-        <ul className={styles.challengesList}>
-          {project?.challenges?.map((challenge, index) => (
-            <li key={index} className={styles.challengeItem}>
-              <h3>{challenge?.title}</h3>
-              <p>{challenge?.description}</p>
-              <p>
-                <strong>Solution:</strong> {challenge?.solution}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </section>
+        <div>
+          <section className={styles.card}>
+            <h2 className={styles.sectionTitle}>Technologies Used</h2>
+            <div className={styles.techTags}>
+              {project?.technologies?.map((tech, index) => (
+                <span key={index} className={styles.tag}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </section>
 
-      <section className={styles.projectOutcomes} data-aos="fade-up">
-        <h2>Outcomes and Achievements</h2>
-        <ul className={styles.outcomesList}>
-          {project?.outcomes?.map((outcome, index) => (
-            <li key={index} className={styles.outcomeItem}>
-              {outcome}
-            </li>
-          ))}
-        </ul>
-      </section>
+          <section className={styles.card}>
+            <h2 className={styles.sectionTitle}>Project Timeline</h2>
+            <p>{project.timeline}</p>
+          </section>
 
-      <footer className={styles.projectFooter} data-aos="fade-up">
-        <a
-          href={project.siteUrl}
-          className={styles.ctaButton}
-          target="_blank"
-          rel="noopener noreferrer">
-          Visit Live Site
-        </a>
-        <a
-          href={project.codeUrl}
-          className={`${styles.ctaButton} ${styles.secondary}`}
-          target="_blank"
-          rel="noopener noreferrer">
-          View Source Code
-        </a>
-      </footer>
+          <section className={styles.card}>
+            <h2 className={styles.sectionTitle}>My Role</h2>
+            <p>{project.role}</p>
+          </section>
+        </div>
+      </div>
     </div>
   );
 };
