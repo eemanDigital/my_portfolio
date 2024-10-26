@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "./BioDataTable.module.css";
+import styles from "./bioDataTable.module.css";
 
 const BioDataTable = () => {
   return (
