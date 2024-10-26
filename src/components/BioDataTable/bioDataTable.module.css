@@ -26,3 +26,9 @@ td {
   font-weight: 400;
   color: var(--primary-text-color);
 }
+
+@media (max-width: 480px) {
+  .bioDataTable {
+    width: 300px;
+  }
+}
