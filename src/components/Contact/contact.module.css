@@ -142,9 +142,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  /* .contactFormContainer {
-    width: 500px;
-  } */
+  .contactFormContainer {
+    width: 400px;
+  }
   .formRow {
     grid-template-columns: 1fr;
     gap: 0;
