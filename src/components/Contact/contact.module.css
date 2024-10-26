@@ -142,6 +142,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* .contactFormContainer {
+    width: 500px;
+  } */
   .formRow {
     grid-template-columns: 1fr;
     gap: 0;
@@ -153,5 +156,11 @@
 
   .contact {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactFormContainer {
+    width: 300px;
   }
 }
