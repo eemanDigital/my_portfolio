@@ -7,11 +7,10 @@ import {
 import HomeLayout from "./pages/home/HomeLayout";
 import Home from "./pages/home/Home";
 import ProjectDetail from "./pages/ProjectDetails/ProjectDetail";
-import styles from "./app.module.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { ThemeContext, ThemeProvider } from "./context/ThemeContext";
-import { useContext, useEffect } from "react";
+
+import { useEffect } from "react";
 
 function App() {
   // scroll animation handler
@@ -34,18 +33,18 @@ function App() {
     )
   );
 
-  return (
-    <ThemeProvider>
-      <ThemedApp router={router} />
-    </ThemeProvider>
-  );
-}
+  // return (
+  //   <ThemeProvider>
+  //     <ThemedApp router={router} />
+  //   </ThemeProvider>
+  // );
+  // }
 
-function ThemedApp({ router }) {
-  const { lightTheme } = useContext(ThemeContext);
+  // function ThemedApp({ router }) {
+  //   const { lightTheme } = useContext(ThemeContext);
 
   return (
-    <div className={styles.app} data-theme={lightTheme ? "light" : "dark"}>
+    <div>
       <RouterProvider router={router} />
     </div>
   );

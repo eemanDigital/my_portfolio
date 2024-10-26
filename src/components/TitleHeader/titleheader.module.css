@@ -6,7 +6,7 @@
 .titleHeader {
   font-size: 1.4rem;
   font-weight: 600;
-  background: linear-gradient(to right, #1bd3eb, #ffffff);
+  background: var(--text-color-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* margin-bottom: 2rem; */
