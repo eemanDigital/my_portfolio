@@ -6,6 +6,12 @@ import sc2 from "./assets/CM2.png";
 import sc3 from "./assets/CM3.png";
 import sc4 from "./assets/CM4.png";
 import sc5 from "./assets/CM5.png";
+import bw1 from "./assets/bw1.png";
+import bw2 from "./assets/bw2.png";
+import bw3 from "./assets/bw3.png";
+import bw4 from "./assets/bw4.png";
+import bw5 from "./assets/bw5.png";
+import bw6 from "./assets/bw6.png";
 
 export const project_data = [
   {
@@ -87,7 +93,8 @@ export const project_data = [
     title: "Business Registration Services Website",
     shortDescription:
       "A full-stack web application tailored for business registration services",
-    image: eemanTechImg,
+    image: bw1,
+    screenshots: [bw1, bw2, bw3, bw4, bw5, bw6],
 
     fullDescription:
       "A full-stack web application designed for business registration services, built using the MERN stack and SCSS. The platform features a responsive front-end with an intuitive UI and an admin dashboard for managing blog posts. The application also integrates a simple blog feature to enhance SEO and showcase services offered.",

@@ -221,6 +221,9 @@
     max-width: 280px;
     height: 280px;
   }
+  .heroImgBox::before {
+    inset: -4px 100px;
+  }
 
   .heroDescription {
     font-size: 1.2rem;
@@ -251,6 +254,10 @@
   .heroImgBox {
     max-width: 220px;
     height: 220px;
+  }
+
+  .heroImgBox::before {
+    inset: -4px 100px;
   }
 
   .imgBoxContent h2 {
