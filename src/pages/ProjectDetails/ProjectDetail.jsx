@@ -154,6 +154,26 @@ const ProjectDetail = () => {
               ))}
             </ul>
           </section>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Lessons Learnt</h2>
+            <ul className={styles.outcomesList}>
+              {project?.lessons?.map((lesson, index) => (
+                <li key={index} className={styles.outcomeItem}>
+                  {lesson}
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>Working On</h2>
+            <ul className={styles.outcomesList}>
+              {project?.futureEnhancements?.map((feature, index) => (
+                <li key={index} className={styles.outcomeItem}>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
 
         <div>

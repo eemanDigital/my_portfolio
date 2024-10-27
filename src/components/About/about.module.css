@@ -3,7 +3,7 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0;
   background: var(--text-color-gradient);
@@ -16,14 +16,13 @@
 .bioSectionWrapper p {
   color: var(--primary-text-color);
   margin-top: 0;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .aboutContainer {
   display: flex;
   justify-content: space-around;
-  align-items: last baseline;
-
+  align-items: first baseline;
   gap: 2rem;
   margin: 0 auto;
 }

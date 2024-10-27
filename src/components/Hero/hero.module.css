@@ -4,12 +4,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* color: var(--primary-text-color); */
   padding: 0;
   min-height: 500px;
   width: 100%;
   overflow: hidden;
-  /* margin-right: 4rem; */
 }
 
 .heroContainer {
@@ -181,7 +179,7 @@
   color: var(--primary-text-color);
   width: 200px;
   padding: 0.75rem 1.5rem;
-  border: 1px solid var(--primary-text-color);
+  border: 2px solid var(--primary-text-color);
   border-radius: 5px;
   cursor: pointer;
   font-weight: 200;
@@ -262,17 +260,13 @@
 
   .imgBoxContent h2 {
     font-size: 0.4rem;
-
     letter-spacing: 0.1rem;
   }
 
   .imgBoxContent a {
     padding: 0.2rem 0.4rem;
-
     border-radius: 20px;
-
     font-size: 0.9rem;
-
     letter-spacing: 0.1rem;
   }
 

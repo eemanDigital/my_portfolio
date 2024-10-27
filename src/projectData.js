@@ -89,59 +89,111 @@ export const project_data = [
 
   {
     id: 2,
-    header: "Other Project",
-    title: "Business Registration Services Website",
+    header: "Full-Stack Blog Platform",
+    title: "Business Registration Services Website with a Blog System",
     shortDescription:
-      "A full-stack web application tailored for business registration services",
+      "A comprehensive full-stack web application featuring a blog system with CRUD operations, full-text search, and comment functionality",
     image: bw1,
     screenshots: [bw1, bw2, bw3, bw4, bw5, bw6],
 
     fullDescription:
-      "A full-stack web application designed for business registration services, built using the MERN stack and SCSS. The platform features a responsive front-end with an intuitive UI and an admin dashboard for managing blog posts. The application also integrates a simple blog feature to enhance SEO and showcase services offered.",
+      "A sophisticated full-stack web application built on the MERN stack, featuring a blog system alongside business registration services. The platform incorporates features such as commenting with nested replies, full-text search capabilities, and an admin dashboard. The blog system is designed to enhance content management experience for both administrators and users while ensuring robust content organization and accessibility.",
 
     technologies: ["React", "Node.js", "Express", "MongoDB", "SCSS"],
-    timeline: "November 2024 - February 2024",
+
+    timeline: "November 2023 - October, 2024",
     role: "Sole Developer",
 
     features: [
-      "Authentication and Authorization",
-      "Display of Services Rendered",
-      "Simple Blog Feature",
-      "Admin Dashboard for Managing Posts",
+      "Authentication & Role-based Access Control",
+      "Comment System with Nested Replies",
+      "Full-text Search with Filtering Options",
+      "Rich Text Editor for Content Creation",
+      "Image Upload and Management System",
+      "Social Sharing Integration",
+      "Related Posts Recommendation System",
+      "Responsive Design with Infinite Scroll",
+      "Tag and Category Management",
+      "Admin Dashboard for Content Management",
     ],
 
     challenges: [
       {
-        title: "Authentication and Authorization",
+        title: "Authentication System",
         description:
-          "Implementing secure authentication and authorization mechanisms to ensure that only authorized users can access sensitive admin functionalities, while maintaining a smooth user experience.",
+          "Implementing a secure authentication system with role-based access control (admin, author, reader) while maintaining a smooth user experience.",
+        solution:
+          "Implemented JWT authentication with HTTP-only cookies for secure token storage. Created middleware for role-based access control to protect admin routes and ensure proper authorization for different user actions.",
       },
       {
-        title: "Responsive UI Design",
+        title: "Comment System Implementation",
         description:
-          "Ensuring the website remains visually appealing and fully functional across various devices, particularly mobile, to provide the best user experience for all users.",
+          "Building a comment system with nested replies while ensuring proper data organization and user interaction handling.",
+        solution:
+          "Implemented a nested comment structure using the Materialized Path pattern in MongoDB. Created optimized queries for fetching comment threads and implemented UI components for intuitive comment interactions and nested reply displays.",
       },
       {
-        title: "SEO Optimization",
+        title: "Search Optimization",
         description:
-          "Enhancing the blog feature to improve the website's search engine visibility, making sure content is properly structured for both users and search engine crawlers.",
+          "Implementing efficient full-text search across blog posts with filtering capabilities while maintaining performance with growing content.",
+        solution:
+          "Created compound text indexes in MongoDB for efficient search. Implemented debouncing for search input and pagination for results. Added filters using MongoDB's aggregate pipeline for category and date-based filtering.",
       },
       {
-        title: "Efficient Data Handling",
+        title: "Image Management System",
         description:
-          "Optimizing the admin dashboard and form management to handle data efficiently, especially with regard to blog post updates and site content management.",
+          "Designing a scalable system for handling image uploads and storage while optimizing for performance and cost.",
+        solution:
+          "Integrated AWS S3 for image storage with pre-signed URLs for secure uploads. Implemented image optimization using Sharp.js for resizing and compression. Added lazy loading with blur placeholders for better user experience.",
       },
       {
-        title: "Scalability",
+        title: "Performance Optimization",
         description:
-          "Building the architecture in a way that allows easy scalability, both for traffic increases and for the potential addition of new services and features.",
+          "Managing performance with increasing content and user interactions, especially with features like infinite scroll and image loading.",
+        solution:
+          "Implemented pagination with infinite scroll using Intersection Observer. Optimized database queries with proper indexing. Used React.lazy for component splitting to reduce initial bundle size.",
       },
+      {
+        title: "Content Management Workflow",
+        description:
+          "Creating an intuitive workflow for content creation and management while handling rich text content and media.",
+        solution:
+          "Integrated TipTap rich text editor with custom extensions for image handling. Implemented auto-save functionality using debounce. Added preview mode for posts before publication.",
+      },
+      {
+        title: "SEO and Social Sharing",
+        description:
+          "Implementing SEO features and social sharing capabilities while ensuring proper meta tags and content structure.",
+        solution:
+          "Implemented dynamic meta tags using React Helmet. Added structured data for blog posts using JSON-LD. Integrated Open Graph tags for better social sharing previews. Implemented proper heading hierarchy for better SEO.",
+      },
+      {
+        title: "Mobile Responsiveness",
+        description:
+          "Ensuring complex features like rich text editing and infinite scroll worked seamlessly across all devices.",
+        solution:
+          "Used CSS Grid and Flexbox for responsive layouts. Implemented touch-friendly interfaces for mobile users. Created device-specific optimizations for the rich text editor. Used Intersection Observer for efficient infinite scroll on mobile devices.",
+      },
+    ],
+
+    lessons: [
+      "The importance of proper architecture planning for scalable features",
+      "Effective strategies for handling comment system data structure",
+      "Balancing feature richness with performance optimization",
+      "Best practices for implementing secure user authentication",
     ],
 
     siteUrl: "https://eemantech-app.vercel.app",
     codeUrl: "https://github.com/eemanDigital/modern_business_app",
-  },
 
+    futureEnhancements: [
+      "Analytics Dashboard Integration",
+      "Email Notification System",
+      "Real-time Chat Features",
+      "Enhanced Admin Dashboard with Analytics",
+      "Multi-language Support",
+    ],
+  },
   {
     id: 3,
     title: "TicTacToe App",
@@ -149,8 +201,8 @@ export const project_data = [
     shortDescription: "A simple TicTacToe game application.",
     fullDescription:
       "This project showcases a basic TicTacToe game developed using React and CSS. The application features a dynamic game board, player management, and a game log, with a modern UI designed using CSS.",
-    image: tictactoeImg, // Ensure this is replaced with the correct image path or variable
-    carousel_images: ["screenshot1", "screenshot4"], // Replace with appropriate paths to your carousel images
+    image: tictactoeImg,
+
     technologies: ["React", "CSS"],
     timeline: "July 2022 - August 2022",
     role: "Sole Developer",

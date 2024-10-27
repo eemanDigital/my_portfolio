@@ -24,27 +24,47 @@ const About = () => {
 
         <div className={styles.storyWrapper}>
           <p className={styles.story}>
-            My journey began as a lawyer, but in 2020, I discovered my passion
-            for software engineering. I embarked on a self-taught path in 2020,
-            diving deep into various programming languages and technologies.
-            This dedication led me to the ALX Africa Software Engineering
-            program in 2022, where I further honed my skills through their
-            intensive one-year curriculum.
+            My journey began as a litigation lawyer in Nigeria. While I enjoyed
+            the legal profession, the routine 9-5 work left me yearning for more
+            creative outlets beyond traditional lawyering. In November 2020,
+            during the Covid-19 pandemic, I discovered my passion for software
+            engineering. I started as a self-taught developer, balancing
+            learning to code with my full-time legal career. The path wasn't
+            easy, but my determination kept me going.
           </p>
 
           <p className={styles.story}>
-            Driven by my growing passion for technology, I made the bold
-            decision to transition fully into software development. This move
-            allowed me to focus entirely on building innovative solutions that
-            bridge the gap between technology and business needs.
+            In 2022, I came across the ALX Software Engineering programme.
+            Despite my demanding schedule as a lawyer, I seized the opportunity
+            and enrolled. The intensive one-year curriculum at ALX Africa proved
+            to be transformative, helping me build a solid foundation in
+            software development while expanding my technical expertise.
           </p>
 
           <p className={styles.story}>
-            I'm motivated by the transformative power of technology across
+            Driven by my growing passion for technology and armed with new
+            skills, I made the bold decision to transition fully into software
+            development. This move allowed me to focus entirely on what had
+            become my true calling - building innovative solutions that bridge
+            the gap between technology and business needs.
+          </p>
+
+          <p className={styles.story}>
+            Today, I'm motivated by technology's transformative power across
             industries. My unique background in law, combined with my software
-            engineering skills, allows me to approach problems from multiple
-            angles. I'm passionate about creating impactful software that
-            delivers user-centric and business-focused solutions.
+            engineering skills, gives me a distinct advantage in approaching
+            problems from multiple angles. I'm passionate about creating
+            impactful software solutions that not only meet technical
+            requirements but also deliver real value through user-centric and
+            business-focused approaches.
+          </p>
+
+          <p className={styles.story}>
+            Looking ahead, I aim to leverage my dual expertise in law and
+            technology to create innovative solutions that can revolutionize
+            legal tech and beyond. My journey from law to code has taught me
+            that the most meaningful innovations often happen at the
+            intersection of different disciplines.
           </p>
         </div>
       </div>
