@@ -7,6 +7,7 @@ const About = () => {
   return (
     <section className={styles.about} id="about">
       <div className={styles.aboutContainer}>
+        
         <div className={styles.bioSectionWrapper}>
           <h1 className={styles.title}>About Me</h1>
           <p>I like Building Solutions </p>

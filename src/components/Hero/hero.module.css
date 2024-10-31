@@ -285,6 +285,6 @@
   }
 }
 
-.imgBoxContent img.grayscale {
-  filter: grayscale(100%);
-}
+/* .imgBoxContent img.grayscale {
+  filter: grayscale(50%);
+} */
