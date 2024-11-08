@@ -2,7 +2,7 @@ import styles from "./bioDataTable.module.css";
 
 const BioDataTable = () => {
   return (
-    <div className={styles.bioDataTable}>
+    <div className={styles.bioDataTable} data-aos="slide-right">
       <table>
         <tbody>
           <tr>

@@ -6,7 +6,7 @@ const Skills = ({ skills }) => {
     <div className={styles.aboutSkills}>
       <TitleHeader title="Technical Expertise" />
 
-      <ul className={styles.aboutSkillsList}>
+      <ul className={styles.aboutSkillsList} data-aos="zoom-out">
         {skills.map((skill, index) => (
           <li key={index} className={styles.skillItem}>
             <div className={styles.iconWrapper}>{skill.icon}</div>

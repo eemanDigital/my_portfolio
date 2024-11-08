@@ -7,23 +7,25 @@ const About = () => {
   return (
     <section className={styles.about} id="about">
       <div className={styles.aboutContainer}>
-        
         <div className={styles.bioSectionWrapper}>
-          <h1 className={styles.title}>About Me</h1>
-          <p>I like Building Solutions </p>
+          <h1 className={styles.title} data-aos="slide-right">
+            About Me
+          </h1>
+          <p data-aos="slide-right">I like Building Solutions </p>
           <Link
+            data-aos="slide-right"
             className={styles.downloadBtn}
             onClick={() => handleDownloadResume()}>
             <i></i>
             <i></i>
-            <span> Download CV</span>
+            <span>Download CV</span>
           </Link>
           <BioDataTable />
 
           <div className={styles.socials}></div>
         </div>
 
-        <div className={styles.storyWrapper}>
+        <div className={styles.storyWrapper} data-aos="zoom-in">
           <p className={styles.story}>
             My journey began as a litigation lawyer in Nigeria. While I enjoyed
             the legal profession, the routine 9-5 work left me yearning for more

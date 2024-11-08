@@ -85,7 +85,7 @@ const ContactForm = () => {
     <section className={styles.contact}>
       <TitleHeader title="Contact" icon={<RiContactsBook3Line size={20} />} />
 
-      <div className={styles.contactFormContainer}>
+      <div className={styles.contactFormContainer} data-aos="fade-right">
         <ToastContainer />
         <div className={styles.formWrapper}>
           <form ref={form} onSubmit={sendEmail}>

@@ -1,5 +1,4 @@
 /* hero.module.css */
-
 .hero {
   display: flex;
   justify-content: space-around;
@@ -17,7 +16,6 @@
   max-width: 600px;
   line-height: 1.2;
   padding: 2rem;
-
   z-index: 1;
 }
 .heroContainer p {
